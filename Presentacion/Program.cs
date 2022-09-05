@@ -16,7 +16,7 @@ namespace Presentacion
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmPunto_Venta());
+            Application.Run(new frmMDIPrincipal());
         }
     }
 }

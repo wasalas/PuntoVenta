@@ -64,6 +64,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmMDIPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMDIPrincipal.Designer.cs">
+      <DependentUpon>frmMDIPrincipal.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmPunto_Venta.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -92,6 +98,9 @@
     <Compile Include="SqlServerTypes\Loader.cs" />
     <Compile Include="Util\Metodos.cs" />
     <Compile Include="Util\Validaciones.cs" />
+    <EmbeddedResource Include="frmMDIPrincipal.resx">
+      <DependentUpon>frmMDIPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmPunto_Venta.resx">
       <DependentUpon>frmPunto_Venta.cs</DependentUpon>
     </EmbeddedResource>
