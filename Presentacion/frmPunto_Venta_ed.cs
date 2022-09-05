@@ -27,7 +27,6 @@ namespace Presentacion
             this.Estado_guarda = Opcion;
             this.oDatos = Datos;
         }
-
         private void frmPunto_Venta_ed_Load(object sender, EventArgs e)
         {
             if (this.Estado_guarda == 1)
@@ -45,7 +44,6 @@ namespace Presentacion
             }
             this.Text += "Punto de Venta";
         }
-
         private void btn_guardar_Click(object sender, EventArgs e)
         {
             string Rpta = "";

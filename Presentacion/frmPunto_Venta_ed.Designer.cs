@@ -63,7 +63,7 @@
             this.txt_descrip.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_descrip.Location = new System.Drawing.Point(121, 57);
             this.txt_descrip.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.txt_descrip.MaxLength = 50;
+            this.txt_descrip.MaxLength = 30;
             this.txt_descrip.Name = "txt_descrip";
             this.txt_descrip.Size = new System.Drawing.Size(431, 22);
             this.txt_descrip.TabIndex = 5;

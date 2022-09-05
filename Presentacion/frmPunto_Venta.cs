@@ -17,7 +17,7 @@ namespace Presentacion
         #region "Mis Variables"
         private static frmPunto_Venta _instancia;
         private EPunto_Venta oDatos = new EPunto_Venta();
-        private int Cantidad_registros;
+        private int Cantidad_registros = 0;
         private int Estado_guarda;
         bool estado;
         string texto_buscar;
@@ -36,6 +36,82 @@ namespace Presentacion
         {
             _instancia = null;
         }
+        private void txt_buscar_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.KeyChar = Convert.ToChar(e.KeyChar.ToString().ToUpper());
+        }
+        private void btn_buscar_Click(object sender, EventArgs e)
+        {
+            CargaDatos();
+        }
+        private void btn_limpiar_Click(object sender, EventArgs e)
+        {
+            this.txt_buscar.Text = "";
+            CargaDatos();
+        }
+        private void dgDatos_DoubleClick(object sender, EventArgs e)
+        {
+            btn_modificar_Click(sender, e);
+        }
+        private void btn_modificar_Click(object sender, EventArgs e)
+        {
+            ObtenerDatosForm();
+            if (this.Cantidad_registros == 0)
+            {
+                MessageBox.Show("Seleccione un item a modificar.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            this.Estado_guarda = 2;
+            Editar();
+        }
+        private void chkEsatdo_CheckedChanged(object sender, EventArgs e)
+        {
+            CargaDatos();
+        }
+        private void btn_nuevo_Click(object sender, EventArgs e)
+        {
+            this.Estado_guarda = 1;
+            Editar();
+        }
+        private void btn_eliminar_Click(object sender, EventArgs e)
+        {
+            ObtenerDatosForm();
+            if (this.Cantidad_registros == 0)
+            {
+                MessageBox.Show("Seleccione un item a desactivar.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (oDatos.Estado != 1)
+            {
+                MessageBox.Show("Registro ya desactivado.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            Eliminar();
+        }
+        private void btn_reporte_Click(object sender, EventArgs e)
+        {
+            
+            ObtenerDatosForm();
+            if (this.Cantidad_registros == 0)
+            {
+                MessageBox.Show("No existen datos para el reporte.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            
+            Reportes.frmPunto_Venta_rpt frm = new Reportes.frmPunto_Venta_rpt();
+            frm.chk_estado.Checked = this.estado;
+            frm.txt_texto.Text = this.texto_buscar;
+            frm.ShowDialog();
+            
+        }
+        private void btn_cerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+        private void txt_buscar_TextChanged(object sender, EventArgs e)
+        {
+
+        }
         #endregion
 
         #region "Mis Metodos"
@@ -44,18 +120,26 @@ namespace Presentacion
             ObtenerDatosForm();
 
             byte p_estado = Convert.ToByte(estado ? 1 : 0);
+            this.Cantidad_registros = 0;
 
-            dgDatos.DataSource = NPunto_Ventas.Listado(p_estado, this.texto_buscar);
-            this.Cantidad_registros = dgDatos.Rows.Count;
+            try
+            {
+                dgDatos.DataSource = NPunto_Ventas.Listado(p_estado, this.texto_buscar);
+                this.Cantidad_registros = dgDatos.Rows.Count;
+                FormatoGrid();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + "\n" + ex.StackTrace, "Error del S istema", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
 
             ts_estado.Items[0].Text = "Estado : " + (estado ? "Activos" : "Inactivos");
             ts_estado.Items[1].Text = "   ";
             ts_estado.Items[2].Text = "Total registros : " + this.Cantidad_registros;
-            FormatoGrid();
         }
         private void Editar()
         {
-            
+
             frmPunto_Venta_ed frm = new frmPunto_Venta_ed(this.Estado_guarda, oDatos);
             frm.ShowDialog();
 
@@ -64,7 +148,7 @@ namespace Presentacion
                 CargaDatos();
                 BuscarEnGrid(oDatos.Codigo_pv);
             }
-            
+
         }
         private void Eliminar()
         {
@@ -88,6 +172,8 @@ namespace Presentacion
         private void ObtenerDatosForm()
         {
             dgDatos.Focus();
+            
+            this.Cantidad_registros = dgDatos.Rows.Count;
 
             estado = this.chkEsatdo.Checked;
             texto_buscar = this.txt_buscar.Text.ToUpper().Trim();
@@ -146,92 +232,5 @@ namespace Presentacion
         }
         #endregion
 
-        private void txt_buscar_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            e.KeyChar = Convert.ToChar(e.KeyChar.ToString().ToUpper());
-        }
-
-        private void btn_buscar_Click(object sender, EventArgs e)
-        {
-            CargaDatos();
-        }
-
-        private void btn_limpiar_Click(object sender, EventArgs e)
-        {
-            this.txt_buscar.Text = "";
-            CargaDatos();
-        }
-
-        private void dgDatos_DoubleClick(object sender, EventArgs e)
-        {
-            btn_modificar_Click(sender, e);
-        }
-
-        private void btn_modificar_Click(object sender, EventArgs e)
-        {
-            ObtenerDatosForm();
-            if (this.Cantidad_registros == 0)
-            {
-                MessageBox.Show("Seleccione un item a modificar.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-            this.Estado_guarda = 2;
-            Editar();
-        }
-
-        private void chkEsatdo_CheckedChanged(object sender, EventArgs e)
-        {
-            CargaDatos();
-        }
-
-        private void btn_nuevo_Click(object sender, EventArgs e)
-        {
-            this.Estado_guarda = 1;
-            Editar();
-        }
-
-        private void btn_eliminar_Click(object sender, EventArgs e)
-        {
-            ObtenerDatosForm();
-            if (this.Cantidad_registros == 0)
-            {
-                MessageBox.Show("Seleccione un item a desactivar.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-            if (oDatos.Estado != 1)
-            {
-                MessageBox.Show("Registro ya desactivado.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return;
-            }
-            Eliminar();
-        }
-
-        private void btn_reporte_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("En construccion.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            /*
-            ObtenerDatosForm();
-            if (this.Cantidad_registros == 0)
-            {
-                MessageBox.Show("No existen datos para el reporte.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-            
-            Reportes.frmRepMarcas frm = new Reportes.frmRepMarcas();
-            frm.chk_estado.Checked = this.estado;
-            frm.txt_texto.Text = this.texto_buscar;
-            frm.ShowDialog();
-            */
-        }
-
-        private void btn_cerrar_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void txt_buscar_TextChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }
