@@ -30,7 +30,9 @@ namespace Presentacion
         private void frmPunto_Venta_ed_Load(object sender, EventArgs e)
         {
             if (this.Estado_guarda == 1)
-            {                
+            {
+                this.txt_codigo.Text = "0";
+                this.txt_descrip.Text = "";
                 this.chk_estado.Checked = true;
                 this.chk_estado.Enabled = false;
                 this.Text = "Nuevo ";

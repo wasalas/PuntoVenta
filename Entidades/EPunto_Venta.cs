@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-    public class EPunto_Venta
+    public class EFamilias
     {
-        public int Codigo_pv { get; set; }
-        public string Descripcion_pv { get; set; }
+        public int Codigo_fa { get; set; }
+        public string Descripcion_fa { get; set; }
         public byte Estado { get; set; }
     }
 }

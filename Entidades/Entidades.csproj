@@ -41,6 +41,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EMarcas.cs" />
+    <Compile Include="ESubFamilias.cs" />
+    <Compile Include="EFamilias.cs" />
     <Compile Include="EPunto_Venta.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

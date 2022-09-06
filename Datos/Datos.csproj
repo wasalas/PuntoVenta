@@ -42,6 +42,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Conexion.cs" />
+    <Compile Include="DMarcas.cs" />
+    <Compile Include="DSubFamilias.cs" />
+    <Compile Include="DFamilias.cs" />
     <Compile Include="DPunto_Venta.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

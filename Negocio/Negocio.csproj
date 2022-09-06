@@ -41,6 +41,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="NMarcas.cs" />
+    <Compile Include="NSubFamilias.cs" />
+    <Compile Include="NFamilias.cs" />
     <Compile Include="NPunto_Ventas.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

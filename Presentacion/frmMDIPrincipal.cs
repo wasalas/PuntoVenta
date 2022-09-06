@@ -26,12 +26,21 @@ namespace Presentacion
         }
         private void Menu_Familia_Click(object sender, EventArgs e)
         {
-
+            frmFamilias frm = frmFamilias.GetInstancia();
+            frm.MdiParent = this;
+            frm.Show();
         }
         private void Menu_Salir_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
         #endregion
+
+        private void Menu_Marcas_Click(object sender, EventArgs e)
+        {
+            frmMarcas frm = frmMarcas.GetInstancia();
+            frm.MdiParent = this;
+            frm.Show();
+        }
     }
 }

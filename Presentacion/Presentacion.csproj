@@ -64,17 +64,53 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmMarcas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMarcas.Designer.cs">
+      <DependentUpon>frmMarcas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMarcas_ed.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMarcas_ed.Designer.cs">
+      <DependentUpon>frmMarcas_ed.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSubFamilias_ed.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSubFamilias_ed.Designer.cs">
+      <DependentUpon>frmSubFamilias_ed.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSubFamilias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSubFamilias.Designer.cs">
+      <DependentUpon>frmSubFamilias.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmMDIPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmMDIPrincipal.Designer.cs">
       <DependentUpon>frmMDIPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmFamilias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFamilias.Designer.cs">
+      <DependentUpon>frmFamilias.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmPunto_Venta.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmPunto_Venta.Designer.cs">
       <DependentUpon>frmPunto_Venta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmFamilias_ed.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFamilias_ed.Designer.cs">
+      <DependentUpon>frmFamilias_ed.cs</DependentUpon>
     </Compile>
     <Compile Include="frmPunto_Venta_ed.cs">
       <SubType>Form</SubType>
@@ -89,6 +125,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DS_Reportes.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Reportes\frmMarcas_rpt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\frmMarcas_rpt.Designer.cs">
+      <DependentUpon>frmMarcas_rpt.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reportes\frmPunto_Venta_rpt.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -98,11 +140,29 @@
     <Compile Include="SqlServerTypes\Loader.cs" />
     <Compile Include="Util\Metodos.cs" />
     <Compile Include="Util\Validaciones.cs" />
+    <EmbeddedResource Include="frmMarcas.resx">
+      <DependentUpon>frmMarcas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMarcas_ed.resx">
+      <DependentUpon>frmMarcas_ed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSubFamilias_ed.resx">
+      <DependentUpon>frmSubFamilias_ed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSubFamilias.resx">
+      <DependentUpon>frmSubFamilias.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmMDIPrincipal.resx">
       <DependentUpon>frmMDIPrincipal.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmFamilias.resx">
+      <DependentUpon>frmFamilias.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmPunto_Venta.resx">
       <DependentUpon>frmPunto_Venta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmFamilias_ed.resx">
+      <DependentUpon>frmFamilias_ed.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPunto_Venta_ed.resx">
       <DependentUpon>frmPunto_Venta_ed.cs</DependentUpon>
@@ -116,9 +176,13 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Reportes\frmMarcas_rpt.resx">
+      <DependentUpon>frmMarcas_rpt.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reportes\frmPunto_Venta_rpt.resx">
       <DependentUpon>frmPunto_Venta_rpt.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\rptMarcas.rdlc" />
     <EmbeddedResource Include="Reportes\rptPunto_Venta.rdlc" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
