@@ -51,7 +51,21 @@ namespace Presentacion
         }
         private void dgDatos_DoubleClick(object sender, EventArgs e)
         {
-            btn_modificar_Click(sender, e);
+            btn_mesas_Click(sender, e);
+        }        
+        private void btn_mesas_Click(object sender, EventArgs e)
+        {
+            ObtenerDatosForm();
+            if (this.Cantidad_registros == 0)
+            {
+                MessageBox.Show("Seleccione un item para ver su detalle.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            frmMesas frm = frmMesas.GetInstancia();
+            //frm.MdiParent = this;
+            frm.txt_codigo_pv.Text = Convert.ToString(oDatos.Codigo_pv);
+            frm.txt_descripcion_pv.Text = oDatos.Descripcion_pv;
+            frm.ShowDialog();
         }
         private void btn_modificar_Click(object sender, EventArgs e)
         {
@@ -107,10 +121,6 @@ namespace Presentacion
         private void btn_cerrar_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-        private void txt_buscar_TextChanged(object sender, EventArgs e)
-        {
-
         }
         #endregion
 

@@ -30,9 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPunto_Venta));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.chkEsatdo = new System.Windows.Forms.CheckBox();
             this.ts_3 = new System.Windows.Forms.ToolStripStatusLabel();
@@ -50,6 +50,7 @@
             this.btn_modificar = new System.Windows.Forms.Button();
             this.btn_nuevo = new System.Windows.Forms.Button();
             this.dgDatos = new System.Windows.Forms.DataGridView();
+            this.btn_mesas = new System.Windows.Forms.Button();
             this.ts_estado.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgDatos)).BeginInit();
             this.SuspendLayout();
@@ -67,6 +68,7 @@
             this.imageList1.Images.SetKeyName(6, "WZEDIT.BMP");
             this.imageList1.Images.SetKeyName(7, "WZPRINT.BMP");
             this.imageList1.Images.SetKeyName(8, "WZSAVE.BMP");
+            this.imageList1.Images.SetKeyName(9, "mesa.png");
             // 
             // chkEsatdo
             // 
@@ -165,7 +167,6 @@
             this.txt_buscar.Name = "txt_buscar";
             this.txt_buscar.Size = new System.Drawing.Size(268, 22);
             this.txt_buscar.TabIndex = 20;
-            this.txt_buscar.TextChanged += new System.EventHandler(this.txt_buscar_TextChanged);
             this.txt_buscar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_buscar_KeyPress);
             // 
             // label1
@@ -182,7 +183,7 @@
             // 
             this.btn_cerrar.ImageKey = "WZCLOSE.BMP";
             this.btn_cerrar.ImageList = this.imageList1;
-            this.btn_cerrar.Location = new System.Drawing.Point(528, 290);
+            this.btn_cerrar.Location = new System.Drawing.Point(583, 290);
             this.btn_cerrar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btn_cerrar.Name = "btn_cerrar";
             this.btn_cerrar.Size = new System.Drawing.Size(110, 32);
@@ -197,7 +198,7 @@
             // 
             this.btn_reporte.ImageKey = "WZPRINT.BMP";
             this.btn_reporte.ImageList = this.imageList1;
-            this.btn_reporte.Location = new System.Drawing.Point(413, 290);
+            this.btn_reporte.Location = new System.Drawing.Point(469, 290);
             this.btn_reporte.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btn_reporte.Name = "btn_reporte";
             this.btn_reporte.Size = new System.Drawing.Size(110, 32);
@@ -212,7 +213,7 @@
             // 
             this.btn_eliminar.ImageKey = "WZDELETE.BMP";
             this.btn_eliminar.ImageList = this.imageList1;
-            this.btn_eliminar.Location = new System.Drawing.Point(298, 290);
+            this.btn_eliminar.Location = new System.Drawing.Point(355, 290);
             this.btn_eliminar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btn_eliminar.Name = "btn_eliminar";
             this.btn_eliminar.Size = new System.Drawing.Size(110, 32);
@@ -227,7 +228,7 @@
             // 
             this.btn_modificar.ImageKey = "WZEDIT.BMP";
             this.btn_modificar.ImageList = this.imageList1;
-            this.btn_modificar.Location = new System.Drawing.Point(183, 290);
+            this.btn_modificar.Location = new System.Drawing.Point(241, 290);
             this.btn_modificar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btn_modificar.Name = "btn_modificar";
             this.btn_modificar.Size = new System.Drawing.Size(110, 32);
@@ -242,7 +243,7 @@
             // 
             this.btn_nuevo.ImageKey = "NEW.BMP";
             this.btn_nuevo.ImageList = this.imageList1;
-            this.btn_nuevo.Location = new System.Drawing.Point(68, 290);
+            this.btn_nuevo.Location = new System.Drawing.Point(127, 290);
             this.btn_nuevo.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btn_nuevo.Name = "btn_nuevo";
             this.btn_nuevo.Size = new System.Drawing.Size(110, 32);
@@ -259,30 +260,30 @@
             this.dgDatos.AllowUserToDeleteRows = false;
             this.dgDatos.AllowUserToOrderColumns = true;
             this.dgDatos.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(163)))), ((int)(((byte)(235)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            this.dgDatos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(163)))), ((int)(((byte)(235)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            this.dgDatos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgDatos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(253)))), ((int)(((byte)(250)))));
             this.dgDatos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgDatos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(111)))), ((int)(((byte)(212)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgDatos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(111)))), ((int)(((byte)(212)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgDatos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgDatos.ColumnHeadersHeight = 30;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgDatos.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgDatos.DefaultCellStyle = dataGridViewCellStyle6;
             this.dgDatos.EnableHeadersVisualStyles = false;
             this.dgDatos.Location = new System.Drawing.Point(0, 42);
             this.dgDatos.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -296,12 +297,28 @@
             this.dgDatos.TabIndex = 23;
             this.dgDatos.DoubleClick += new System.EventHandler(this.dgDatos_DoubleClick);
             // 
+            // btn_mesas
+            // 
+            this.btn_mesas.ImageKey = "mesa.png";
+            this.btn_mesas.ImageList = this.imageList1;
+            this.btn_mesas.Location = new System.Drawing.Point(13, 290);
+            this.btn_mesas.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btn_mesas.Name = "btn_mesas";
+            this.btn_mesas.Size = new System.Drawing.Size(110, 32);
+            this.btn_mesas.TabIndex = 33;
+            this.btn_mesas.Text = "&Mesas";
+            this.btn_mesas.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_mesas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_mesas.UseVisualStyleBackColor = true;
+            this.btn_mesas.Click += new System.EventHandler(this.btn_mesas_Click);
+            // 
             // frmPunto_Venta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(707, 357);
+            this.Controls.Add(this.btn_mesas);
             this.Controls.Add(this.chkEsatdo);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.ts_estado);
@@ -350,5 +367,6 @@
         private System.Windows.Forms.Button btn_modificar;
         private System.Windows.Forms.Button btn_nuevo;
         private System.Windows.Forms.DataGridView dgDatos;
+        private System.Windows.Forms.Button btn_mesas;
     }
 }

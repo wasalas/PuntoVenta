@@ -16,9 +16,10 @@ namespace Presentacion
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmMDIPrincipal());
-            //Application.Run(new frmMarcas());
-            
+            //Application.Run(new frmMDIPrincipal());
+            Application.Run(new Procesos.frmRegistro_Pedidos());
+            //Application.Run(new frmDashBoard());
+
         }
     }
 }

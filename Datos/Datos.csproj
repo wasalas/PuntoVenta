@@ -42,6 +42,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Conexion.cs" />
+    <Compile Include="DArea_despacho.cs" />
+    <Compile Include="DImagen_Predeterminada.cs" />
+    <Compile Include="DImagen_Productos.cs" />
+    <Compile Include="DCierres_Turnos.cs" />
+    <Compile Include="DProductos.cs" />
+    <Compile Include="DMesas.cs" />
+    <Compile Include="DUnidades_Medida.cs" />
     <Compile Include="DMarcas.cs" />
     <Compile Include="DSubFamilias.cs" />
     <Compile Include="DFamilias.cs" />

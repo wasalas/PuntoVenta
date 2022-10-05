@@ -41,6 +41,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EArea_Despacho.cs" />
+    <Compile Include="EProductos.cs" />
+    <Compile Include="EMesas.cs" />
+    <Compile Include="EUnidades_Medida.cs" />
     <Compile Include="EMarcas.cs" />
     <Compile Include="ESubFamilias.cs" />
     <Compile Include="EFamilias.cs" />

@@ -16,6 +16,11 @@ namespace Negocio
             DPunto_Venta oDatos = new DPunto_Venta();
             return oDatos.Listado(estado, texto);
         }
+        public static DataTable OK(int opcion, int codigo_pr)
+        {
+            DPunto_Venta oDatos = new DPunto_Venta();
+            return oDatos.OK(opcion, codigo_pr);
+        }
         public static string Guardar(int opt_guarda, EPunto_Venta oEntidad)
         {
             DPunto_Venta oDatos = new DPunto_Venta();

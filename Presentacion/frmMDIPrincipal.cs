@@ -42,5 +42,19 @@ namespace Presentacion
             frm.MdiParent = this;
             frm.Show();
         }
+
+        private void Menu_Unidades_Click(object sender, EventArgs e)
+        {
+            frmUnidades_Medida frm = frmUnidades_Medida.GetInstancia();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void Menu_Productos_Click(object sender, EventArgs e)
+        {
+            frmProductos frm = frmProductos.GetInstancia();
+            frm.MdiParent = this;
+            frm.Show();
+        }
     }
 }

@@ -41,6 +41,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="NArea_Despacho.cs" />
+    <Compile Include="NImagem_Predeterminada.cs" />
+    <Compile Include="NImagem_Productos.cs" />
+    <Compile Include="NCierres_Turnos.cs" />
+    <Compile Include="NProductos.cs" />
+    <Compile Include="NMesas.cs" />
+    <Compile Include="NUnidades_Medida.cs" />
     <Compile Include="NMarcas.cs" />
     <Compile Include="NSubFamilias.cs" />
     <Compile Include="NFamilias.cs" />

@@ -74,7 +74,7 @@ namespace Datos
             try
             {
                 SqlCon = Conexion.GetInstancia().CrearConexion();
-                SqlCommand Comando = new SqlCommand("spEliminar_Familias", SqlCon);
+                SqlCommand Comando = new SqlCommand("spEliminar_SubFamilias", SqlCon);
                 Comando.CommandType = CommandType.StoredProcedure;
                 Comando.Parameters.Add("@codigo", SqlDbType.Int).Value = codigo;
                 SqlCon.Open();
