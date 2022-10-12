@@ -71,6 +71,12 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controles\MiMesa.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\MiMesa.Designer.cs">
+      <DependentUpon>MiMesa.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmArea_Despacho.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,6 +94,18 @@
     </Compile>
     <Compile Include="frmDashBoard.Designer.cs">
       <DependentUpon>frmDashBoard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTurnos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTurnos.Designer.cs">
+      <DependentUpon>frmTurnos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTurnos_ed.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTurnos_ed.Designer.cs">
+      <DependentUpon>frmTurnos_ed.cs</DependentUpon>
     </Compile>
     <Compile Include="frmProductos_ed.cs">
       <SubType>Form</SubType>
@@ -179,6 +197,24 @@
     <Compile Include="frmPunto_Venta_ed.Designer.cs">
       <DependentUpon>frmPunto_Venta_ed.cs</DependentUpon>
     </Compile>
+    <Compile Include="Procesos\frmCierres_Turnos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Procesos\frmCierres_Turnos.Designer.cs">
+      <DependentUpon>frmCierres_Turnos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Procesos\frmCierres_Turnos_ed.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Procesos\frmCierres_Turnos_ed.Designer.cs">
+      <DependentUpon>frmCierres_Turnos_ed.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Procesos\frmMesa_Abierta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Procesos\frmMesa_Abierta.Designer.cs">
+      <DependentUpon>frmMesa_Abierta.cs</DependentUpon>
+    </Compile>
     <Compile Include="Procesos\frmRegistro_Pedidos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -219,6 +255,9 @@
     <Compile Include="SqlServerTypes\Loader.cs" />
     <Compile Include="Util\Metodos.cs" />
     <Compile Include="Util\Validaciones.cs" />
+    <EmbeddedResource Include="Controles\MiMesa.resx">
+      <DependentUpon>MiMesa.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmArea_Despacho.resx">
       <DependentUpon>frmArea_Despacho.cs</DependentUpon>
     </EmbeddedResource>
@@ -227,6 +266,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmDashBoard.resx">
       <DependentUpon>frmDashBoard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTurnos.resx">
+      <DependentUpon>frmTurnos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTurnos_ed.resx">
+      <DependentUpon>frmTurnos_ed.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmProductos_ed.resx">
       <DependentUpon>frmProductos_ed.cs</DependentUpon>
@@ -272,6 +317,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmPunto_Venta_ed.resx">
       <DependentUpon>frmPunto_Venta_ed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Procesos\frmCierres_Turnos.resx">
+      <DependentUpon>frmCierres_Turnos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Procesos\frmCierres_Turnos_ed.resx">
+      <DependentUpon>frmCierres_Turnos_ed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Procesos\frmMesa_Abierta.resx">
+      <DependentUpon>frmMesa_Abierta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Procesos\frmRegistro_Pedidos.resx">
       <DependentUpon>frmRegistro_Pedidos.cs</DependentUpon>

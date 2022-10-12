@@ -1,5 +1,10 @@
 select * from Productos
 select * from Imagen_Productos
+select * from Imagen_Predeterminada
+
+update Imagen_Predeterminada set disponible = (select imagen from Imagen_Productos where codigo_pr=6)
+update Imagen_Predeterminada set nodisponible = (select imagen from Imagen_Productos where codigo_pr=7)
+
 select * from Productos_Disponibles_PV
 
 delete from Productos

@@ -41,7 +41,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ECierres_Turnos.cs" />
     <Compile Include="EArea_Despacho.cs" />
+    <Compile Include="ETurnos.cs" />
     <Compile Include="EProductos.cs" />
     <Compile Include="EMesas.cs" />
     <Compile Include="EUnidades_Medida.cs" />

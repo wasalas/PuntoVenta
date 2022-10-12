@@ -9,19 +9,21 @@ using Entidades;
 
 namespace Datos
 {
-    public class DCierres_Turnos
+    public class DTurnos
     {
-        public DataTable Estado_Turno_PV(int codigo_pv)
+        public DataTable Listado(byte estado, string texto)
         {
             SqlDataReader Resultado;
             DataTable Tabla = new DataTable();
             SqlConnection SqlCon = new SqlConnection();
+
             try
             {
                 SqlCon = Conexion.GetInstancia().CrearConexion();
-                SqlCommand Comando = new SqlCommand("spEstado_Turno_PV", SqlCon);
+                SqlCommand Comando = new SqlCommand("spListado_Turnos", SqlCon);
                 Comando.CommandType = CommandType.StoredProcedure;
-                Comando.Parameters.Add("@codigo_pv", SqlDbType.Int).Value = codigo_pv;                
+                Comando.Parameters.Add("@estado", SqlDbType.Bit).Value = estado;
+                Comando.Parameters.Add("@texto", SqlDbType.VarChar).Value = texto;
                 SqlCon.Open();
                 Resultado = Comando.ExecuteReader();
                 Tabla.Load(Resultado);
@@ -36,47 +38,21 @@ namespace Datos
                 if (SqlCon.State == ConnectionState.Open) SqlCon.Close();
             }
         }
-        public string  Abrir(ECierres_Turnos oDatos)
+        public string Guardar(int opcion, ETurnos oEntidad)
         {
-            string Rpta;            
-            DataTable Tabla = new DataTable();
+            string Rpta = "";
             SqlConnection SqlCon = new SqlConnection();
             try
             {
                 SqlCon = Conexion.GetInstancia().CrearConexion();
-                SqlCommand Comando = new SqlCommand("spAbrir", SqlCon);
+                SqlCommand Comando = new SqlCommand("spGuardar_Turnos", SqlCon);
                 Comando.CommandType = CommandType.StoredProcedure;
-                Comando.Parameters.Add("@fecha_ct", SqlDbType.Date).Value = oDatos.Fecha_ct;
-                Comando.Parameters.Add("@codigo_pv", SqlDbType.Int).Value = oDatos.Codigo_pv;
-                Comando.Parameters.Add("@codigo_tu", SqlDbType.Int).Value = oDatos.Codigo_tu;
+                Comando.Parameters.Add("@opt_guarda", SqlDbType.Int).Value = opcion;
+                Comando.Parameters.Add("@codigo", SqlDbType.Int).Value = oEntidad.Codigo_tu;
+                Comando.Parameters.Add("@descripcion", SqlDbType.VarChar).Value = oEntidad.Descripcion_tu;
+                Comando.Parameters.Add("@estado", SqlDbType.Bit).Value = oEntidad.Estado;
                 SqlCon.Open();
-                Rpta = Comando.ExecuteNonQuery() >= 1 ? "OK" : "No se pudo Abrir el Turno";                
-            }
-            catch (Exception ex)
-            {
-                Rpta = ex.Message;
-            }
-            finally
-            {
-                if (SqlCon.State == ConnectionState.Open) SqlCon.Close();
-            }
-            return Rpta;
-        }
-        public string Cerrar(ECierres_Turnos oDatos)
-        {
-            string Rpta;
-            DataTable Tabla = new DataTable();
-            SqlConnection SqlCon = new SqlConnection();
-            try
-            {
-                SqlCon = Conexion.GetInstancia().CrearConexion();
-                SqlCommand Comando = new SqlCommand("spCerrar", SqlCon);
-                Comando.CommandType = CommandType.StoredProcedure;
-                Comando.Parameters.Add("@fecha_ct", SqlDbType.Date).Value = oDatos.Fecha_ct;
-                Comando.Parameters.Add("@codigo_pv", SqlDbType.Int).Value = oDatos.Codigo_pv;
-                Comando.Parameters.Add("@codigo_tu", SqlDbType.Int).Value = oDatos.Codigo_tu;
-                SqlCon.Open();
-                Rpta = Comando.ExecuteNonQuery() >= 1 ? "OK" : "No se pudo Cerrar el Turno";
+                Rpta = Comando.ExecuteNonQuery() >= 1 ? "OK" : "No se pudo guardar la información";
             }
             catch (Exception ex)
             {
@@ -89,5 +65,29 @@ namespace Datos
             return Rpta;
 
         }
+        public string Eliminar(int codigo)
+        {
+            string Rpta = "";
+            SqlConnection SqlCon = new SqlConnection();
+            try
+            {
+                SqlCon = Conexion.GetInstancia().CrearConexion();
+                SqlCommand Comando = new SqlCommand("spEliminar_Turnos", SqlCon);
+                Comando.CommandType = CommandType.StoredProcedure;
+                Comando.Parameters.Add("@codigo", SqlDbType.Int).Value = codigo;
+                SqlCon.Open();
+                Rpta = Comando.ExecuteNonQuery() == 1 ? "OK" : "No se pudo desactivar.";
+            }
+            catch (Exception ex)
+            {
+                Rpta = ex.Message;
+            }
+            finally
+            {
+                if (SqlCon.State == ConnectionState.Open) SqlCon.Close();
+            }
+            return Rpta;
+        }
+
     }
 }

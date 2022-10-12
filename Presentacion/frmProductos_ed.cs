@@ -216,7 +216,7 @@ namespace Presentacion
         private void btn_buscar_imagen_Click(object sender, EventArgs e)
         {
             OpenFileDialog Foto = new OpenFileDialog();
-            Foto.Filter = "Archivos de imagen (*.jpg, *.jpe, *.jpeg, *.jfif, *.prg) | *.jpg;*.jpe;*.jpeg;*.jfif;*.prg";
+            Foto.Filter = "Archivos de imagen (*.jpg, *.jpe, *.jpeg, *.jfif, *.png) | *.jpg;*.jpe;*.jpeg;*.jfif;*.png";
             if (Foto.ShowDialog() == DialogResult.OK)
                 img_imagen.Image = Image.FromFile(Foto.FileName);
         }

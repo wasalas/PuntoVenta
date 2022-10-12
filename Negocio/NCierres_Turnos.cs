@@ -16,5 +16,15 @@ namespace Negocio
             DCierres_Turnos oDatos = new DCierres_Turnos();
             return oDatos.Estado_Turno_PV(codigo_pv);
         }
+        public static string Abrir(ECierres_Turnos oEntidad)
+        {
+            DCierres_Turnos oDatos = new DCierres_Turnos();
+            return oDatos.Abrir(oEntidad);
+        }
+        public static string Cerra(ECierres_Turnos oEntidad)
+        {
+            DCierres_Turnos oDatos = new DCierres_Turnos();
+            return oDatos.Cerrar(oEntidad);
+        }
     }
 }

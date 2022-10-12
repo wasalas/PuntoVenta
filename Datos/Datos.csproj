@@ -46,6 +46,7 @@
     <Compile Include="DImagen_Predeterminada.cs" />
     <Compile Include="DImagen_Productos.cs" />
     <Compile Include="DCierres_Turnos.cs" />
+    <Compile Include="DTurnos.cs" />
     <Compile Include="DProductos.cs" />
     <Compile Include="DMesas.cs" />
     <Compile Include="DUnidades_Medida.cs" />

@@ -14,11 +14,6 @@ namespace Presentacion
 {
     public partial class frmDashBoard : Form
     {
-        // DragForm
-        [DllImport("user32.dll", EntryPoint = "ReleaseCapture")]
-        private extern static void ReleaseCapture();
-        [DllImport("user32.dll", EntryPoint = "SendMessage")]
-        private extern static void SendMessage(System.IntPtr Hwnd, int wMsg, int wParam, int lParam);
 
         #region "Mis Variables"
         private IconButton currentBtn;
@@ -31,7 +26,7 @@ namespace Presentacion
         {
             InitializeComponent();
             leftBorderBtn = new Panel();
-            leftBorderBtn.Size = new Size(7, 46);            
+            leftBorderBtn.Size = new Size(7, 46);
             pnl_menu.Controls.Add(leftBorderBtn);
 
             this.Text = String.Empty;
@@ -58,13 +53,20 @@ namespace Presentacion
             Ocultar_Paneles();
             Disable_Titulo();
         }
+        
+        // DragForm
+        [DllImport("user32.dll", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        
+        [DllImport("user32.dll", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr Hwnd, int wMsg, int wParam, int lParam);
         private void pnl_cabecera_MouseDown(object sender, MouseEventArgs e)
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
         private void btn_procesos_Click(object sender, EventArgs e)
-        {            
+        {
             if (pnl_procesos.Visible)
             {
                 Disable_Boton();
@@ -93,7 +95,7 @@ namespace Presentacion
             else
             {
                 Enable_Boton(sender, RGBColors.color2);
-                Enable_Titulo(sender, RGBColors.color2); 
+                Enable_Titulo(sender, RGBColors.color2);
                 pnl_reportes.Visible = true;
             }
             pnl_datosmaestros.Visible = false;
@@ -168,7 +170,7 @@ namespace Presentacion
         #region "Mis Metodos"
         private void Open_Form(Form oForm)
         {
-            if (ActiveForm != null)            
+            if (ActiveForm != null)
                 ActiveForm.Close();
 
             ActiveForm = oForm;
@@ -179,20 +181,20 @@ namespace Presentacion
             pnl_cuerpo.Tag = oForm;
             oForm.BringToFront();
             oForm.Show();
-            
+
         }
         private void Ocultar_Paneles()
         {
             pnl_procesos.Visible = false;
             pnl_reportes.Visible = false;
             pnl_datosmaestros.Visible = false;
-        }        
+        }
         private void Disable_Boton()
-        {            
+        {
             if (currentBtn != null)
             {
                 currentBtn.BackColor = Color.FromArgb(44, 105, 141);
-                currentBtn.ForeColor = Color.White;                
+                currentBtn.ForeColor = Color.White;
                 //currentBtn.TextAlign = ContentAlignment.MiddleLeft;
                 currentBtn.IconColor = Color.White;
                 //currentBtn.TextImageRelation = TextImageRelation.TextBeforeImage;
@@ -201,11 +203,11 @@ namespace Presentacion
         }
         private void Enable_Boton(object senderBtn, Color color)
         {
-            if(senderBtn != null)
+            if (senderBtn != null)
             {
                 Disable_Boton();
                 currentBtn = (IconButton)senderBtn;
-                currentBtn.BackColor = Color.FromArgb(37,36,81);
+                currentBtn.BackColor = Color.FromArgb(37, 36, 81);
                 currentBtn.ForeColor = color;
                 //currentBtn.TextAlign = ContentAlignment.MiddleCenter;
                 currentBtn.IconColor = color;
@@ -218,7 +220,7 @@ namespace Presentacion
             ico_seleccion.IconChar = IconChar.Home;
             ico_seleccion.IconColor = Color.Black;
             lbl_seleccion.Text = "Home";
-            lbl_seleccion.ForeColor = Color.Black;            
+            lbl_seleccion.ForeColor = Color.Black;
         }
         private void Enable_Titulo(object senderBtn, Color color)
         {
@@ -235,16 +237,26 @@ namespace Presentacion
         }
         private struct RGBColors
         {
-            public static Color color1 = Color.FromArgb(172,126,241);
-            public static Color color2 = Color.FromArgb(249,118,176);
-            public static Color color3 = Color.FromArgb(253,138,114);
-            public static Color color4 = Color.FromArgb(24,161,251);
+            public static Color color1 = Color.FromArgb(172, 126, 241);
+            public static Color color2 = Color.FromArgb(249, 118, 176);
+            public static Color color3 = Color.FromArgb(253, 138, 114);
+            public static Color color4 = Color.FromArgb(24, 161, 251);
         }
         #endregion
 
         private void btn_registrar_pedido_Click(object sender, EventArgs e)
         {
             Open_Form(new Procesos.frmRegistro_Pedidos());
+        }
+
+        private void btn_gestion_turnos_Click(object sender, EventArgs e)
+        {
+            Open_Form(new Procesos.frmCierres_Turnos());
+        }
+
+        private void btn_turnos_Click(object sender, EventArgs e)
+        {
+            Open_Form(new frmTurnos());
         }
     }
 }

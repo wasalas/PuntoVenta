@@ -32,6 +32,7 @@
             this.pnl_menu = new System.Windows.Forms.Panel();
             this.btn_cessarsesion = new FontAwesome.Sharp.IconButton();
             this.pnl_datosmaestros = new System.Windows.Forms.Panel();
+            this.btn_turnos = new FontAwesome.Sharp.IconButton();
             this.btn_areaDespacho = new FontAwesome.Sharp.IconButton();
             this.btn_ptoventaMesas = new FontAwesome.Sharp.IconButton();
             this.btn_famSsubFam = new FontAwesome.Sharp.IconButton();
@@ -46,7 +47,7 @@
             this.btn_reportes = new FontAwesome.Sharp.IconButton();
             this.pnl_procesos = new System.Windows.Forms.Panel();
             this.iconButton3 = new FontAwesome.Sharp.IconButton();
-            this.iconButton2 = new FontAwesome.Sharp.IconButton();
+            this.btn_gestion_turnos = new FontAwesome.Sharp.IconButton();
             this.btn_registrar_pedido = new FontAwesome.Sharp.IconButton();
             this.btn_procesos = new FontAwesome.Sharp.IconButton();
             this.btn_dashboard = new FontAwesome.Sharp.IconButton();
@@ -109,7 +110,7 @@
             this.btn_cessarsesion.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btn_cessarsesion.IconSize = 32;
             this.btn_cessarsesion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_cessarsesion.Location = new System.Drawing.Point(0, 794);
+            this.btn_cessarsesion.Location = new System.Drawing.Point(0, 834);
             this.btn_cessarsesion.Name = "btn_cessarsesion";
             this.btn_cessarsesion.Size = new System.Drawing.Size(183, 40);
             this.btn_cessarsesion.TabIndex = 8;
@@ -121,6 +122,7 @@
             // pnl_datosmaestros
             // 
             this.pnl_datosmaestros.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(193)))), ((int)(((byte)(211)))));
+            this.pnl_datosmaestros.Controls.Add(this.btn_turnos);
             this.pnl_datosmaestros.Controls.Add(this.btn_areaDespacho);
             this.pnl_datosmaestros.Controls.Add(this.btn_ptoventaMesas);
             this.pnl_datosmaestros.Controls.Add(this.btn_famSsubFam);
@@ -130,8 +132,31 @@
             this.pnl_datosmaestros.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnl_datosmaestros.Location = new System.Drawing.Point(0, 550);
             this.pnl_datosmaestros.Name = "pnl_datosmaestros";
-            this.pnl_datosmaestros.Size = new System.Drawing.Size(183, 244);
+            this.pnl_datosmaestros.Size = new System.Drawing.Size(183, 284);
             this.pnl_datosmaestros.TabIndex = 7;
+            // 
+            // btn_turnos
+            // 
+            this.btn_turnos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_turnos.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_turnos.FlatAppearance.BorderSize = 0;
+            this.btn_turnos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_turnos.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_turnos.ForeColor = System.Drawing.Color.White;
+            this.btn_turnos.IconChar = FontAwesome.Sharp.IconChar.FileAlt;
+            this.btn_turnos.IconColor = System.Drawing.Color.White;
+            this.btn_turnos.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btn_turnos.IconSize = 32;
+            this.btn_turnos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_turnos.Location = new System.Drawing.Point(0, 240);
+            this.btn_turnos.Name = "btn_turnos";
+            this.btn_turnos.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.btn_turnos.Size = new System.Drawing.Size(183, 40);
+            this.btn_turnos.TabIndex = 8;
+            this.btn_turnos.Text = "Turnos";
+            this.btn_turnos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_turnos.UseVisualStyleBackColor = true;
+            this.btn_turnos.Click += new System.EventHandler(this.btn_turnos_Click);
             // 
             // btn_areaDespacho
             // 
@@ -397,7 +422,7 @@
             // 
             this.pnl_procesos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(193)))), ((int)(((byte)(211)))));
             this.pnl_procesos.Controls.Add(this.iconButton3);
-            this.pnl_procesos.Controls.Add(this.iconButton2);
+            this.pnl_procesos.Controls.Add(this.btn_gestion_turnos);
             this.pnl_procesos.Controls.Add(this.btn_registrar_pedido);
             this.pnl_procesos.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnl_procesos.Location = new System.Drawing.Point(0, 210);
@@ -427,27 +452,28 @@
             this.iconButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButton3.UseVisualStyleBackColor = true;
             // 
-            // iconButton2
+            // btn_gestion_turnos
             // 
-            this.iconButton2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconButton2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.iconButton2.FlatAppearance.BorderSize = 0;
-            this.iconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton2.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton2.ForeColor = System.Drawing.Color.White;
-            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.SquareUpRight;
-            this.iconButton2.IconColor = System.Drawing.Color.White;
-            this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton2.IconSize = 32;
-            this.iconButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton2.Location = new System.Drawing.Point(0, 40);
-            this.iconButton2.Name = "iconButton2";
-            this.iconButton2.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.iconButton2.Size = new System.Drawing.Size(183, 40);
-            this.iconButton2.TabIndex = 3;
-            this.iconButton2.Text = "Opcion 2";
-            this.iconButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton2.UseVisualStyleBackColor = true;
+            this.btn_gestion_turnos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_gestion_turnos.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_gestion_turnos.FlatAppearance.BorderSize = 0;
+            this.btn_gestion_turnos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_gestion_turnos.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_gestion_turnos.ForeColor = System.Drawing.Color.White;
+            this.btn_gestion_turnos.IconChar = FontAwesome.Sharp.IconChar.SquareUpRight;
+            this.btn_gestion_turnos.IconColor = System.Drawing.Color.White;
+            this.btn_gestion_turnos.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btn_gestion_turnos.IconSize = 32;
+            this.btn_gestion_turnos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_gestion_turnos.Location = new System.Drawing.Point(0, 40);
+            this.btn_gestion_turnos.Name = "btn_gestion_turnos";
+            this.btn_gestion_turnos.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.btn_gestion_turnos.Size = new System.Drawing.Size(183, 40);
+            this.btn_gestion_turnos.TabIndex = 3;
+            this.btn_gestion_turnos.Text = "Gestión de Turnos";
+            this.btn_gestion_turnos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_gestion_turnos.UseVisualStyleBackColor = true;
+            this.btn_gestion_turnos.Click += new System.EventHandler(this.btn_gestion_turnos_Click);
             // 
             // btn_registrar_pedido
             // 
@@ -647,9 +673,9 @@
             this.pnl_pie.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(186)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
             this.pnl_pie.Controls.Add(this.grb_fecha);
             this.pnl_pie.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnl_pie.Location = new System.Drawing.Point(200, 654);
+            this.pnl_pie.Location = new System.Drawing.Point(200, 670);
             this.pnl_pie.Name = "pnl_pie";
-            this.pnl_pie.Size = new System.Drawing.Size(1174, 77);
+            this.pnl_pie.Size = new System.Drawing.Size(1174, 61);
             this.pnl_pie.TabIndex = 2;
             // 
             // grb_fecha
@@ -661,17 +687,16 @@
             this.grb_fecha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.grb_fecha.Location = new System.Drawing.Point(903, 6);
             this.grb_fecha.Name = "grb_fecha";
-            this.grb_fecha.Size = new System.Drawing.Size(259, 67);
+            this.grb_fecha.Size = new System.Drawing.Size(259, 47);
             this.grb_fecha.TabIndex = 0;
             this.grb_fecha.TabStop = false;
-            this.grb_fecha.Text = "Fecha y Hora :";
             // 
             // lbl_fecha
             // 
-            this.lbl_fecha.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lbl_fecha.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.lbl_fecha.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_fecha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lbl_fecha.Location = new System.Drawing.Point(3, 38);
+            this.lbl_fecha.Location = new System.Drawing.Point(3, 0);
             this.lbl_fecha.Name = "lbl_fecha";
             this.lbl_fecha.Size = new System.Drawing.Size(253, 22);
             this.lbl_fecha.TabIndex = 1;
@@ -680,10 +705,10 @@
             // 
             // lbl_hora
             // 
-            this.lbl_hora.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lbl_hora.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.lbl_hora.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_hora.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lbl_hora.Location = new System.Drawing.Point(3, 16);
+            this.lbl_hora.Location = new System.Drawing.Point(3, 22);
             this.lbl_hora.Name = "lbl_hora";
             this.lbl_hora.Size = new System.Drawing.Size(253, 22);
             this.lbl_hora.TabIndex = 0;
@@ -700,7 +725,7 @@
             this.pnl_cuerpo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnl_cuerpo.Location = new System.Drawing.Point(200, 70);
             this.pnl_cuerpo.Name = "pnl_cuerpo";
-            this.pnl_cuerpo.Size = new System.Drawing.Size(1174, 584);
+            this.pnl_cuerpo.Size = new System.Drawing.Size(1174, 600);
             this.pnl_cuerpo.TabIndex = 3;
             // 
             // frmDashBoard
@@ -744,7 +769,7 @@
         private System.Windows.Forms.Panel pnl_procesos;
         private FontAwesome.Sharp.IconButton btn_procesos;
         private FontAwesome.Sharp.IconButton iconButton3;
-        private FontAwesome.Sharp.IconButton iconButton2;
+        private FontAwesome.Sharp.IconButton btn_gestion_turnos;
         private FontAwesome.Sharp.IconButton btn_registrar_pedido;
         private FontAwesome.Sharp.IconButton btn_cessarsesion;
         private System.Windows.Forms.Panel pnl_datosmaestros;
@@ -771,5 +796,6 @@
         private FontAwesome.Sharp.IconButton btn_areaDespacho;
         private FontAwesome.Sharp.IconButton btn_ptoventaMesas;
         private FontAwesome.Sharp.IconButton btn_famSsubFam;
+        private FontAwesome.Sharp.IconButton btn_turnos;
     }
 }

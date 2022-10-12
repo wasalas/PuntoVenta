@@ -15,6 +15,11 @@ namespace Negocio
         {
             DImagen_Predeterminada oDatos = new DImagen_Predeterminada();
             return oDatos.Mostrar();
-        }        
+        }
+        public static byte[] Imagen_Estado_Mesa(int estado)
+        {
+            DImagen_Predeterminada oDatos = new DImagen_Predeterminada();
+            return oDatos.Imagen_Estado_Mesa(estado);
+        }
     }
 }

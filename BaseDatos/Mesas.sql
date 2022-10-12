@@ -1,15 +1,22 @@
+--select * from Punto_Venta
+--select * from Mesas
+
 create or alter procedure spListado_Mesas
 	@codigo_pv int, 
 	@estado bit,  
 	@texto varchar(30)  
 as  
-	select codigo_me, descripcion_me, codigo_pv, estado 
-	from Mesas
-	where codigo_pv = @codigo_pv and
-			estado = @estado and
- 			trim(cast(codigo_me as char)) + upper(trim(descripcion_me)) like '%' + upper(trim(@texto)) + '%'  
+	select	m.codigo_me, m.descripcion_me, 
+			m.codigo_pv, 
+			p.descripcion_pv,
+			m.disponible, m.estado 
+	from Mesas				m
+	inner join Punto_Venta	p on m.codigo_pv = p.codigo_pv
+	where m.codigo_pv = @codigo_pv and
+			m.estado = @estado and
+ 			trim(cast(m.codigo_me as char)) + upper(trim(m.descripcion_me)) like '%' + upper(trim(@texto)) + '%'  
 	order by 1
-  
+ 
  go
 
  create or alter procedure spGuardar_Mesas
@@ -21,11 +28,11 @@ as
 as
 	if @opt_guarda = 1
 		begin
-			insert into Mesas (descripcion_me, codigo_pv, estado) values (@descripcion, @codigo_pv, 1)
+			insert into Mesas (descripcion_me, codigo_pv, disponible, estado) values (@descripcion, @codigo_pv, 1, 1)
 		end;
 	else
 		begin
-			update Mesas set descripcion_me = @descripcion, estado = @estado where codigo_pv = @codigo_pv
+			update Mesas set descripcion_me = @descripcion, estado = @estado where codigo_me = @codigo_me
 		End;
 go
 
