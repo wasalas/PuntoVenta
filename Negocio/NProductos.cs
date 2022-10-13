@@ -16,6 +16,11 @@ namespace Negocio
             DProductos oDatos = new DProductos();
             return oDatos.Listado(estado, texto);
         }
+        public static DataTable Listado_Productos_SubFamilia_PuntoVenta(int codigo_pv)
+        {
+            DProductos oDatos = new DProductos();
+            return oDatos.Listado_Productos_SubFamilia_PuntoVenta(codigo_pv);
+        }
         public static string Guardar(int opt_guarda, EProductos oEntidad, DataTable dtDatos)
         {
             DProductos oDatos = new DProductos();

@@ -45,6 +45,7 @@
     <Compile Include="NImagem_Predeterminada.cs" />
     <Compile Include="NImagem_Productos.cs" />
     <Compile Include="NCierres_Turnos.cs" />
+    <Compile Include="NMesa_Abierta.cs" />
     <Compile Include="NTurnos.cs" />
     <Compile Include="NProductos.cs" />
     <Compile Include="NMesas.cs" />

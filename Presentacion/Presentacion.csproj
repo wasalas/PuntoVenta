@@ -77,6 +77,12 @@
     <Compile Include="Controles\MiMesa.Designer.cs">
       <DependentUpon>MiMesa.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controles\MiProducto.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\MiProducto.Designer.cs">
+      <DependentUpon>MiProducto.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmArea_Despacho.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -257,6 +263,9 @@
     <Compile Include="Util\Validaciones.cs" />
     <EmbeddedResource Include="Controles\MiMesa.resx">
       <DependentUpon>MiMesa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\MiProducto.resx">
+      <DependentUpon>MiProducto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmArea_Despacho.resx">
       <DependentUpon>frmArea_Despacho.cs</DependentUpon>

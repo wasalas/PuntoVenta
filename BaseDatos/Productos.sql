@@ -10,7 +10,6 @@ create type Ty_prod_pv_ok as table(
 
 go
 
-
 create or alter procedure spListado_Productos
 	@estado bit,  
 	@texto varchar(30)  

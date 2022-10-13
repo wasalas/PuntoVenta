@@ -1,3 +1,5 @@
+select * from Familias
+select * from Sub_Familias
 select * from Productos
 select * from Imagen_Productos
 select * from Imagen_Predeterminada

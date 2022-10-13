@@ -58,6 +58,11 @@ namespace Presentacion.Controles
         private void pic_ImagenMesa_Click(object sender, EventArgs e)
         {
             Procesos.frmMesa_Abierta frm = new Procesos.frmMesa_Abierta();
+            
+            frm.txt_mesa_seleccionada.Text = this.Descripcion_me;
+            frm.txt_punto_venta.Text = this.Descripcion_pv;
+            frm.codigo_pv = this.Codigo_pv;
+
             frm.ShowDialog();
         }
     }
