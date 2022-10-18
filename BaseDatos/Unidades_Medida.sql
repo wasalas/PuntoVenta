@@ -7,7 +7,7 @@ as
 	from Unidades_Medida
 	where estado = @estado and
  			trim(cast(codigo_um as char)) + upper(trim(descripcion_um)) like '%' + upper(trim(@texto)) + '%'  
-	order by 1
+	order by descripcion_um
   
  go
 

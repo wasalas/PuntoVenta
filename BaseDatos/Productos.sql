@@ -19,7 +19,7 @@ as
 		  a.descripcion_ad,			p.precio_unitario,			p.observaciones,
 		  p.codigo_ma,				p.codigo_um,				p.codigo_fa,
 		  p.codigo_sf,				p.codigo_ad,				p.fecha_crea,
-		  p.fecha_modi,				p.estado
+		  p.fecha_modi,				p.estado,					a.impresora
 	FROM Productos p
 		inner join Marcas          m on m.codigo_ma = p.codigo_ma
 		inner join Unidades_Medida u on u.codigo_um = p.codigo_um
@@ -28,7 +28,7 @@ as
 		inner join Area_Despacho   a on a.codigo_ad = p.codigo_ad
 	where p.estado = @estado and
  		trim(cast(p.codigo_pr as char)) + upper(trim(p.descripcion_pr)) like '%' + upper(trim(@texto)) + '%'  
-	order by 1;  
+	order by p.descripcion_pr;  
  go
 
  create or alter procedure spGuardar_Productos

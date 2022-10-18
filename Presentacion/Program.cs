@@ -19,8 +19,11 @@ namespace Presentacion
 
             //Application.Run(new frmMDIPrincipal());
             Application.Run(new frmDashBoard());
+
             //Application.Run(new Procesos.frmRegistro_Pedidos());
             //Application.Run(new Procesos.frmMesa_Abierta());
+
+            //Application.Run(new frmClientes());
 
         }
     }

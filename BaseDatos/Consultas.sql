@@ -3,6 +3,7 @@ select * from Sub_Familias
 select * from Productos
 select * from Imagen_Productos
 select * from Imagen_Predeterminada
+select * from Punto_Venta
 
 update Imagen_Predeterminada set disponible = (select imagen from Imagen_Productos where codigo_pr=6)
 update Imagen_Predeterminada set nodisponible = (select imagen from Imagen_Productos where codigo_pr=7)
@@ -30,4 +31,14 @@ set @texto = '%'
 --	and trim(cast(codigo_ma as char)) + upper(trim(descripcion_ma)) like '%' + upper(trim(@texto)) + '%'  
 
 --select * from Marcas
-select * from Productos
+
+ 
+
+DELETE FROM Clientes
+dbcc checkident(CLIENTES, reseed, 0);
+
+insert into Clientes
+	(codigo_tdi, nrodoc_cl, nombre_cl,        telefono_cl, celular_cl, correo_cl, direccion_cl, fecha_crea, estado)
+	values
+	(1,          '000000000',       'CLIENTE VARIOS', '',          '',         '',        '',        '2022-14-10',1)
+select * from Clientes

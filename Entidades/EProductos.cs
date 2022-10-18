@@ -17,6 +17,7 @@ namespace Entidades
         public decimal Precio_unitario { get; set; }
         public int Codigo_ad { get; set; }
         public string Observaciones { get; set; }
+        public string Impresora{ get; set; }
         public byte Estado { get; set; }
         public byte[] Imagen { get; set; }
     }

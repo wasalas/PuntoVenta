@@ -42,6 +42,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="NArea_Despacho.cs" />
+    <Compile Include="NClientes.cs" />
+    <Compile Include="NDetalle_Tickets.cs" />
+    <Compile Include="NEncabezado_Tickets.cs" />
+    <Compile Include="NTipo_Doc_Ide.cs" />
     <Compile Include="NImagem_Predeterminada.cs" />
     <Compile Include="NImagem_Productos.cs" />
     <Compile Include="NCierres_Turnos.cs" />

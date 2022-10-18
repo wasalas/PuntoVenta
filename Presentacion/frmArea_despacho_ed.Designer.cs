@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmArea_Despacho_ed));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txt_impresora = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.txt_descrip = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txt_codigo = new System.Windows.Forms.TextBox();
@@ -38,8 +40,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.btn_cancelar = new System.Windows.Forms.Button();
             this.btn_guardar = new System.Windows.Forms.Button();
-            this.txt_impresora = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -61,6 +61,27 @@
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "DATOS GENERALES";
+            // 
+            // txt_impresora
+            // 
+            this.txt_impresora.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_impresora.Location = new System.Drawing.Point(120, 79);
+            this.txt_impresora.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txt_impresora.MaxLength = 30;
+            this.txt_impresora.Name = "txt_impresora";
+            this.txt_impresora.Size = new System.Drawing.Size(431, 22);
+            this.txt_impresora.TabIndex = 14;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(27, 82);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(85, 14);
+            this.label4.TabIndex = 12;
+            this.label4.Text = "Impresora :";
             // 
             // txt_descrip
             // 
@@ -155,28 +176,6 @@
             this.btn_guardar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_guardar.UseVisualStyleBackColor = true;
             this.btn_guardar.Click += new System.EventHandler(this.btn_guardar_Click);
-            // 
-            // txt_impresora
-            // 
-            this.txt_impresora.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_impresora.Location = new System.Drawing.Point(120, 79);
-            this.txt_impresora.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.txt_impresora.MaxLength = 30;
-            this.txt_impresora.Name = "txt_impresora";
-            this.txt_impresora.ReadOnly = true;
-            this.txt_impresora.Size = new System.Drawing.Size(431, 22);
-            this.txt_impresora.TabIndex = 14;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(27, 82);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(85, 14);
-            this.label4.TabIndex = 12;
-            this.label4.Text = "Impresora :";
             // 
             // frmArea_Despacho_ed
             // 

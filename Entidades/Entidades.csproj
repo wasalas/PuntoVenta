@@ -43,6 +43,9 @@
   <ItemGroup>
     <Compile Include="ECierres_Turnos.cs" />
     <Compile Include="EArea_Despacho.cs" />
+    <Compile Include="EClientes.cs" />
+    <Compile Include="EEncabezado_Tickets.cs" />
+    <Compile Include="ETipo_Doc_Ide.cs" />
     <Compile Include="ETurnos.cs" />
     <Compile Include="EProductos.cs" />
     <Compile Include="EMesas.cs" />

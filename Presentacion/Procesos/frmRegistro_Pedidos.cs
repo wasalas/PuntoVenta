@@ -24,6 +24,7 @@ namespace Presentacion.Procesos
         public int Codigo_es { get; set; }
         public string Descripcion_me { get; set; }
         public string Descripcion_pv { get; set; }
+        public string Fecha_trabajo { get; set; }
         public Image Estado { get; set; }
 
         #endregion
@@ -149,6 +150,7 @@ namespace Presentacion.Procesos
                     oMesa.Disponible = this.Estado;
                     oMesa.Descripcion_me = this.Descripcion_me; 
                     oMesa.Descripcion_pv = this.Descripcion_pv;
+                    oMesa.Fecha_trabajo = txt_fecha.Text;
 
                     contenedor.Controls.Add(oMesa);
                 }

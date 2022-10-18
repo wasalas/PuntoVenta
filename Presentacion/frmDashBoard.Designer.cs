@@ -32,6 +32,7 @@
             this.pnl_menu = new System.Windows.Forms.Panel();
             this.btn_cessarsesion = new FontAwesome.Sharp.IconButton();
             this.pnl_datosmaestros = new System.Windows.Forms.Panel();
+            this.btn_clientes = new FontAwesome.Sharp.IconButton();
             this.btn_turnos = new FontAwesome.Sharp.IconButton();
             this.btn_areaDespacho = new FontAwesome.Sharp.IconButton();
             this.btn_ptoventaMesas = new FontAwesome.Sharp.IconButton();
@@ -66,6 +67,7 @@
             this.lbl_hora = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.pnl_cuerpo = new System.Windows.Forms.Panel();
+            this.btn_docidentidad = new FontAwesome.Sharp.IconButton();
             this.pnl_menu.SuspendLayout();
             this.pnl_datosmaestros.SuspendLayout();
             this.pnl_reportes.SuspendLayout();
@@ -110,7 +112,7 @@
             this.btn_cessarsesion.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btn_cessarsesion.IconSize = 32;
             this.btn_cessarsesion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_cessarsesion.Location = new System.Drawing.Point(0, 834);
+            this.btn_cessarsesion.Location = new System.Drawing.Point(0, 915);
             this.btn_cessarsesion.Name = "btn_cessarsesion";
             this.btn_cessarsesion.Size = new System.Drawing.Size(183, 40);
             this.btn_cessarsesion.TabIndex = 8;
@@ -122,6 +124,8 @@
             // pnl_datosmaestros
             // 
             this.pnl_datosmaestros.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(193)))), ((int)(((byte)(211)))));
+            this.pnl_datosmaestros.Controls.Add(this.btn_docidentidad);
+            this.pnl_datosmaestros.Controls.Add(this.btn_clientes);
             this.pnl_datosmaestros.Controls.Add(this.btn_turnos);
             this.pnl_datosmaestros.Controls.Add(this.btn_areaDespacho);
             this.pnl_datosmaestros.Controls.Add(this.btn_ptoventaMesas);
@@ -132,8 +136,31 @@
             this.pnl_datosmaestros.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnl_datosmaestros.Location = new System.Drawing.Point(0, 550);
             this.pnl_datosmaestros.Name = "pnl_datosmaestros";
-            this.pnl_datosmaestros.Size = new System.Drawing.Size(183, 284);
+            this.pnl_datosmaestros.Size = new System.Drawing.Size(183, 365);
             this.pnl_datosmaestros.TabIndex = 7;
+            // 
+            // btn_clientes
+            // 
+            this.btn_clientes.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_clientes.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_clientes.FlatAppearance.BorderSize = 0;
+            this.btn_clientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_clientes.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_clientes.ForeColor = System.Drawing.Color.White;
+            this.btn_clientes.IconChar = FontAwesome.Sharp.IconChar.FileAlt;
+            this.btn_clientes.IconColor = System.Drawing.Color.White;
+            this.btn_clientes.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btn_clientes.IconSize = 32;
+            this.btn_clientes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_clientes.Location = new System.Drawing.Point(0, 280);
+            this.btn_clientes.Name = "btn_clientes";
+            this.btn_clientes.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.btn_clientes.Size = new System.Drawing.Size(183, 40);
+            this.btn_clientes.TabIndex = 9;
+            this.btn_clientes.Text = "Clientes";
+            this.btn_clientes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_clientes.UseVisualStyleBackColor = true;
+            this.btn_clientes.Click += new System.EventHandler(this.btn_clientes_Click);
             // 
             // btn_turnos
             // 
@@ -728,6 +755,28 @@
             this.pnl_cuerpo.Size = new System.Drawing.Size(1174, 600);
             this.pnl_cuerpo.TabIndex = 3;
             // 
+            // btn_docidentidad
+            // 
+            this.btn_docidentidad.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_docidentidad.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_docidentidad.FlatAppearance.BorderSize = 0;
+            this.btn_docidentidad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_docidentidad.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_docidentidad.ForeColor = System.Drawing.Color.White;
+            this.btn_docidentidad.IconChar = FontAwesome.Sharp.IconChar.FileAlt;
+            this.btn_docidentidad.IconColor = System.Drawing.Color.White;
+            this.btn_docidentidad.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btn_docidentidad.IconSize = 32;
+            this.btn_docidentidad.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_docidentidad.Location = new System.Drawing.Point(0, 320);
+            this.btn_docidentidad.Name = "btn_docidentidad";
+            this.btn_docidentidad.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.btn_docidentidad.Size = new System.Drawing.Size(183, 40);
+            this.btn_docidentidad.TabIndex = 10;
+            this.btn_docidentidad.Text = "Doc Identidad";
+            this.btn_docidentidad.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_docidentidad.UseVisualStyleBackColor = true;
+            // 
             // frmDashBoard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -797,5 +846,7 @@
         private FontAwesome.Sharp.IconButton btn_ptoventaMesas;
         private FontAwesome.Sharp.IconButton btn_famSsubFam;
         private FontAwesome.Sharp.IconButton btn_turnos;
+        private FontAwesome.Sharp.IconButton btn_clientes;
+        private FontAwesome.Sharp.IconButton btn_docidentidad;
     }
 }

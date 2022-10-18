@@ -33,6 +33,7 @@ namespace Presentacion.Controles
             get { return pic_estado.Image; }
             set { pic_estado.Image = value; }
         }
+        public string Fecha_trabajo { get; set; }
         #endregion
 
         //****************************************************************
@@ -62,6 +63,10 @@ namespace Presentacion.Controles
             frm.txt_mesa_seleccionada.Text = this.Descripcion_me;
             frm.txt_punto_venta.Text = this.Descripcion_pv;
             frm.codigo_pv = this.Codigo_pv;
+            frm.codigo_me = this.Codigo_me;
+            frm.codigo_tu = this.Codigo_tu;
+            frm.fecha_trabajo = this.Fecha_trabajo;
+            frm.Archivo_txt = @"C:\Users\Public\Documents\" + Convert.ToString(DateTime.Now.Ticks) + ".txt";
 
             frm.ShowDialog();
         }

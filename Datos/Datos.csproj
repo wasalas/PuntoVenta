@@ -43,6 +43,10 @@
   <ItemGroup>
     <Compile Include="Conexion.cs" />
     <Compile Include="DArea_despacho.cs" />
+    <Compile Include="DClientes.cs" />
+    <Compile Include="DDetalle_Tickets.cs" />
+    <Compile Include="DEncabezado_Tickets.cs" />
+    <Compile Include="DTipo_Doc_Ide.cs" />
     <Compile Include="DImagen_Predeterminada.cs" />
     <Compile Include="DImagen_Productos.cs" />
     <Compile Include="DCierres_Turnos.cs" />

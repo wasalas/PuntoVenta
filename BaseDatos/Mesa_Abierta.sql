@@ -22,12 +22,12 @@ as
 		   i.imagen,
 		   a.impresora
 		from Productos								p
-			inner join Productos_Disponibles_PV		d on p.codigo_pr = d.codigo_pr and
-													d.codigo_pv      = @codigo_pv  and
-													d.disponible     = 1
+			inner join Productos_Disponibles_PV		d on p.codigo_pr = d.codigo_pr
 			inner join Imagen_Productos				i on p.codigo_pr = i.codigo_pr
 			inner join Area_Despacho				a on p.codigo_ad = a.codigo_ad
 			inner join Unidades_Medida				u on p.codigo_um = u.codigo_um
-	where p.estado    = 1 and
-		  p.codigo_sf = @codigo_sf
+	where p.estado     = 1 and
+		  d.disponible = 1 and
+		  d.codigo_pv  = @codigo_pv and
+		  p.codigo_sf  = @codigo_sf
 	order by p.descripcion_pr

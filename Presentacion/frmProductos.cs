@@ -232,6 +232,7 @@ namespace Presentacion
             dgDatos.Columns[14].Visible = false;
             dgDatos.Columns[15].Visible = false;
             dgDatos.Columns[16].Visible = false;
+            dgDatos.Columns[17].Visible = false;
 
             Metodos.Formato_dgv(dgDatos, 10);
         }

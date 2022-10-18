@@ -95,11 +95,35 @@
     <Compile Include="frmArea_despacho_ed.Designer.cs">
       <DependentUpon>frmArea_despacho_ed.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmClientes_buscar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmClientes_buscar.Designer.cs">
+      <DependentUpon>frmClientes_buscar.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmDashBoard.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmDashBoard.Designer.cs">
       <DependentUpon>frmDashBoard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmClientes.Designer.cs">
+      <DependentUpon>frmClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmClientes_ed.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmClientes_ed.Designer.cs">
+      <DependentUpon>frmClientes_ed.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmProductos_buscar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProductos_buscar.Designer.cs">
+      <DependentUpon>frmProductos_buscar.cs</DependentUpon>
     </Compile>
     <Compile Include="frmTurnos.cs">
       <SubType>Form</SubType>
@@ -273,8 +297,20 @@
     <EmbeddedResource Include="frmArea_despacho_ed.resx">
       <DependentUpon>frmArea_despacho_ed.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmClientes_buscar.resx">
+      <DependentUpon>frmClientes_buscar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmDashBoard.resx">
       <DependentUpon>frmDashBoard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmClientes.resx">
+      <DependentUpon>frmClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmClientes_ed.resx">
+      <DependentUpon>frmClientes_ed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProductos_buscar.resx">
+      <DependentUpon>frmProductos_buscar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmTurnos.resx">
       <DependentUpon>frmTurnos.cs</DependentUpon>

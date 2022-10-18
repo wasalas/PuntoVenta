@@ -35,14 +35,17 @@ namespace Presentacion
             this.cbo_marcas.DataSource = NMarcas.Listado(1, "");
             this.cbo_marcas.ValueMember = "codigo_ma";
             this.cbo_marcas.DisplayMember = "descripcion_ma";
+            this.cbo_marcas.SelectedIndex = -1;
 
             this.cbo_unidades.DataSource = NUnidades_Medida.Listado(1, "");
             this.cbo_unidades.ValueMember = "codigo_um";
             this.cbo_unidades.DisplayMember = "descripcion_um";
+            this.cbo_unidades.SelectedIndex = -1;
 
             this.cbo_adespacho.DataSource = NArea_Despacho.Listado(1, "");
             this.cbo_adespacho.ValueMember = "codigo_ad";
             this.cbo_adespacho.DisplayMember = "descripcion_ad";
+            this.cbo_adespacho.SelectedIndex = -1;
 
             if (this.Estado_guarda == 1)
             {
@@ -138,12 +141,14 @@ namespace Presentacion
             this.cbo_familias.DataSource = NFamilias.Listado(1, "");
             this.cbo_familias.ValueMember = "codigo_fa";
             this.cbo_familias.DisplayMember = "descripcion_fa";
+            this.cbo_familias.SelectedIndex = -1;
         }
         private void Carga_Sub_Familias(int codigo_fa)
         {
             this.cbo_sfamilias.DataSource = NSubFamilias.Listado(codigo_fa, 1, "");
             this.cbo_sfamilias.ValueMember = "codigo_sf";
             this.cbo_sfamilias.DisplayMember = "descripcion_sf";
+            this.cbo_sfamilias.SelectedIndex = -1;
         }
         private void Key_Mayusculas(object sender, KeyPressEventArgs e)
         {

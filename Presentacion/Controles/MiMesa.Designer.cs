@@ -40,6 +40,7 @@
             // 
             // pnl_mesa
             // 
+            this.pnl_mesa.BackColor = System.Drawing.Color.Lavender;
             this.pnl_mesa.Controls.Add(this.lbl_descripcion_me);
             this.pnl_mesa.Controls.Add(this.pic_estado);
             this.pnl_mesa.Controls.Add(this.pic_ImagenMesa);

@@ -15,6 +15,8 @@ namespace Presentacion.Controles
     {
         // ******************************************************************
         #region "Mis Variables"
+
+        internal string archivo_txt="";
         public int Codigo_pr { get; set; }
 
         public string Descripcion_pr
@@ -54,5 +56,23 @@ namespace Presentacion.Controles
         #region "Mis Metodos"
         #endregion
 
+        private void pic_producto_Click(object sender, EventArgs e)
+        {
+            // StreamWriter Escribir = new StreamWriter(@"C:\Users\Public\Documents\" + archivo_txt, true);
+            StreamWriter Escribir = new StreamWriter(@archivo_txt, true);
+            try
+            {
+                Escribir.WriteLine(Descripcion_pr);
+                Escribir.WriteLine(Precio_pr);
+                Escribir.WriteLine(Codigo_pr);
+                Escribir.WriteLine(Impresora);
+                Escribir.WriteLine("\n");
+                Escribir.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + ex.StackTrace);
+            }
+        }
     }
 }
