@@ -30,15 +30,18 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMesa_Abierta));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnl_1 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.pnl_2 = new System.Windows.Forms.Panel();
@@ -84,27 +87,39 @@
             this.btn_2 = new System.Windows.Forms.Button();
             this.btn_1 = new System.Windows.Forms.Button();
             this.btn_buscar_cliente = new System.Windows.Forms.Button();
-            this.txt_nrodocumento = new System.Windows.Forms.TextBox();
+            this.txt_nrodoc = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txt_cliente = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.pag_ver = new System.Windows.Forms.TabPage();
+            this.pnl_detalle_tickets = new System.Windows.Forms.Panel();
+            this.btn_reimprimir_comanda = new System.Windows.Forms.Button();
+            this.label15 = new System.Windows.Forms.Label();
+            this.lbl_total_tickets = new System.Windows.Forms.Label();
+            this.txt_tickets_sel = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.txt_nrodoc_tickets = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.txt_cliente_tickets = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
-            this.pnl_ver_pedidos = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.label11 = new System.Windows.Forms.Label();
+            this.dg_Tickets_Detalle = new System.Windows.Forms.DataGridView();
+            this.pnl_cabecera_tickets = new System.Windows.Forms.Panel();
+            this.lbl_nro_tickets = new System.Windows.Forms.Label();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.dg_Tickets = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.lbl_total_tickets = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.label11 = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.pnl_1.SuspendLayout();
             this.pnl_2.SuspendLayout();
             this.tab_pedidos.SuspendLayout();
@@ -118,9 +133,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.dg_DetalleProd)).BeginInit();
             this.panel1.SuspendLayout();
             this.pag_ver.SuspendLayout();
-            this.pnl_ver_pedidos.SuspendLayout();
-            this.panel4.SuspendLayout();
+            this.pnl_detalle_tickets.SuspendLayout();
+            this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dg_Tickets_Detalle)).BeginInit();
+            this.pnl_cabecera_tickets.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dg_Tickets)).BeginInit();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnl_1
@@ -320,30 +338,30 @@
             this.dg_subfamilias.AllowUserToDeleteRows = false;
             this.dg_subfamilias.AllowUserToOrderColumns = true;
             this.dg_subfamilias.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(163)))), ((int)(((byte)(235)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            this.dg_subfamilias.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(163)))), ((int)(((byte)(235)))));
+            dataGridViewCellStyle16.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle16.ForeColor = System.Drawing.Color.Black;
+            this.dg_subfamilias.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle16;
             this.dg_subfamilias.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(253)))), ((int)(((byte)(250)))));
             this.dg_subfamilias.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dg_subfamilias.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(111)))), ((int)(((byte)(212)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dg_subfamilias.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(111)))), ((int)(((byte)(212)))));
+            dataGridViewCellStyle17.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle17.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dg_subfamilias.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle17;
             this.dg_subfamilias.ColumnHeadersHeight = 30;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dg_subfamilias.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle18.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dg_subfamilias.DefaultCellStyle = dataGridViewCellStyle18;
             this.dg_subfamilias.Dock = System.Windows.Forms.DockStyle.Left;
             this.dg_subfamilias.EnableHeadersVisualStyles = false;
             this.dg_subfamilias.Location = new System.Drawing.Point(0, 0);
@@ -415,7 +433,7 @@
             this.pnl_pedido.Controls.Add(this.btn_2);
             this.pnl_pedido.Controls.Add(this.btn_1);
             this.pnl_pedido.Controls.Add(this.btn_buscar_cliente);
-            this.pnl_pedido.Controls.Add(this.txt_nrodocumento);
+            this.pnl_pedido.Controls.Add(this.txt_nrodoc);
             this.pnl_pedido.Controls.Add(this.label7);
             this.pnl_pedido.Controls.Add(this.txt_cliente);
             this.pnl_pedido.Controls.Add(this.label6);
@@ -532,30 +550,30 @@
             this.dg_DetalleProd.AllowUserToDeleteRows = false;
             this.dg_DetalleProd.AllowUserToOrderColumns = true;
             this.dg_DetalleProd.AllowUserToResizeRows = false;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(163)))), ((int)(((byte)(235)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            this.dg_DetalleProd.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(163)))), ((int)(((byte)(235)))));
+            dataGridViewCellStyle19.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle19.ForeColor = System.Drawing.Color.Black;
+            this.dg_DetalleProd.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle19;
             this.dg_DetalleProd.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(253)))), ((int)(((byte)(250)))));
             this.dg_DetalleProd.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dg_DetalleProd.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(111)))), ((int)(((byte)(212)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dg_DetalleProd.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(111)))), ((int)(((byte)(212)))));
+            dataGridViewCellStyle20.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle20.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dg_DetalleProd.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle20;
             this.dg_DetalleProd.ColumnHeadersHeight = 30;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dg_DetalleProd.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle21.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle21.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle21.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dg_DetalleProd.DefaultCellStyle = dataGridViewCellStyle21;
             this.dg_DetalleProd.EnableHeadersVisualStyles = false;
             this.dg_DetalleProd.Location = new System.Drawing.Point(5, 254);
             this.dg_DetalleProd.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -757,13 +775,13 @@
             this.btn_buscar_cliente.UseVisualStyleBackColor = true;
             this.btn_buscar_cliente.Click += new System.EventHandler(this.btn_buscar_cliente_Click);
             // 
-            // txt_nrodocumento
+            // txt_nrodoc
             // 
-            this.txt_nrodocumento.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_nrodocumento.Location = new System.Drawing.Point(333, 69);
-            this.txt_nrodocumento.Name = "txt_nrodocumento";
-            this.txt_nrodocumento.Size = new System.Drawing.Size(137, 22);
-            this.txt_nrodocumento.TabIndex = 40;
+            this.txt_nrodoc.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_nrodoc.Location = new System.Drawing.Point(333, 69);
+            this.txt_nrodoc.Name = "txt_nrodoc";
+            this.txt_nrodoc.Size = new System.Drawing.Size(137, 22);
+            this.txt_nrodoc.TabIndex = 40;
             // 
             // label7
             // 
@@ -818,8 +836,8 @@
             // 
             // pag_ver
             // 
-            this.pag_ver.Controls.Add(this.pnl_ver_pedidos);
-            this.pag_ver.Controls.Add(this.label1);
+            this.pag_ver.Controls.Add(this.pnl_detalle_tickets);
+            this.pag_ver.Controls.Add(this.pnl_cabecera_tickets);
             this.pag_ver.Location = new System.Drawing.Point(4, 41);
             this.pag_ver.Name = "pag_ver";
             this.pag_ver.Padding = new System.Windows.Forms.Padding(3);
@@ -828,34 +846,327 @@
             this.pag_ver.Text = "Ver Pedidos";
             this.pag_ver.UseVisualStyleBackColor = true;
             // 
+            // pnl_detalle_tickets
+            // 
+            this.pnl_detalle_tickets.Controls.Add(this.btn_reimprimir_comanda);
+            this.pnl_detalle_tickets.Controls.Add(this.label15);
+            this.pnl_detalle_tickets.Controls.Add(this.lbl_total_tickets);
+            this.pnl_detalle_tickets.Controls.Add(this.txt_tickets_sel);
+            this.pnl_detalle_tickets.Controls.Add(this.label14);
+            this.pnl_detalle_tickets.Controls.Add(this.txt_nrodoc_tickets);
+            this.pnl_detalle_tickets.Controls.Add(this.label13);
+            this.pnl_detalle_tickets.Controls.Add(this.txt_cliente_tickets);
+            this.pnl_detalle_tickets.Controls.Add(this.label12);
+            this.pnl_detalle_tickets.Controls.Add(this.panel5);
+            this.pnl_detalle_tickets.Controls.Add(this.dg_Tickets_Detalle);
+            this.pnl_detalle_tickets.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnl_detalle_tickets.Location = new System.Drawing.Point(637, 3);
+            this.pnl_detalle_tickets.Name = "pnl_detalle_tickets";
+            this.pnl_detalle_tickets.Size = new System.Drawing.Size(636, 539);
+            this.pnl_detalle_tickets.TabIndex = 2;
+            // 
+            // btn_reimprimir_comanda
+            // 
+            this.btn_reimprimir_comanda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(132)))), ((int)(((byte)(227)))));
+            this.btn_reimprimir_comanda.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_reimprimir_comanda.Location = new System.Drawing.Point(192, 466);
+            this.btn_reimprimir_comanda.Name = "btn_reimprimir_comanda";
+            this.btn_reimprimir_comanda.Size = new System.Drawing.Size(253, 47);
+            this.btn_reimprimir_comanda.TabIndex = 71;
+            this.btn_reimprimir_comanda.Text = "Reimprimir Comanda";
+            this.btn_reimprimir_comanda.UseVisualStyleBackColor = false;
+            this.btn_reimprimir_comanda.Click += new System.EventHandler(this.btn_reimprimir_comanda_Click);
+            // 
+            // label15
+            // 
+            this.label15.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(331, 422);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(110, 34);
+            this.label15.TabIndex = 70;
+            this.label15.Text = "Total S/. :";
+            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lbl_total_tickets
+            // 
+            this.lbl_total_tickets.BackColor = System.Drawing.Color.Linen;
+            this.lbl_total_tickets.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lbl_total_tickets.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_total_tickets.Location = new System.Drawing.Point(446, 422);
+            this.lbl_total_tickets.Name = "lbl_total_tickets";
+            this.lbl_total_tickets.Size = new System.Drawing.Size(184, 34);
+            this.lbl_total_tickets.TabIndex = 69;
+            this.lbl_total_tickets.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // txt_tickets_sel
+            // 
+            this.txt_tickets_sel.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_tickets_sel.Location = new System.Drawing.Point(7, 143);
+            this.txt_tickets_sel.Multiline = true;
+            this.txt_tickets_sel.Name = "txt_tickets_sel";
+            this.txt_tickets_sel.Size = new System.Drawing.Size(623, 69);
+            this.txt_tickets_sel.TabIndex = 68;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(7, 126);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(161, 14);
+            this.label14.TabIndex = 67;
+            this.label14.Text = "Tickets Seleccionados :";
+            // 
+            // txt_nrodoc_tickets
+            // 
+            this.txt_nrodoc_tickets.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_nrodoc_tickets.Location = new System.Drawing.Point(79, 82);
+            this.txt_nrodoc_tickets.Name = "txt_nrodoc_tickets";
+            this.txt_nrodoc_tickets.Size = new System.Drawing.Size(186, 22);
+            this.txt_nrodoc_tickets.TabIndex = 66;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(7, 85);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(66, 14);
+            this.label13.TabIndex = 65;
+            this.label13.Text = "Nº Doc. :";
+            // 
+            // txt_cliente_tickets
+            // 
+            this.txt_cliente_tickets.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_cliente_tickets.Location = new System.Drawing.Point(79, 54);
+            this.txt_cliente_tickets.Name = "txt_cliente_tickets";
+            this.txt_cliente_tickets.Size = new System.Drawing.Size(523, 22);
+            this.txt_cliente_tickets.TabIndex = 64;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(7, 57);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(62, 14);
+            this.label12.TabIndex = 63;
+            this.label12.Text = "Cliente :";
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(185)))), ((int)(((byte)(59)))));
+            this.panel5.Controls.Add(this.label1);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel5.Location = new System.Drawing.Point(0, 0);
+            this.panel5.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(636, 40);
+            this.panel5.TabIndex = 62;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(1063, 20);
+            this.label1.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(14, 9);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(205, 18);
+            this.label1.Size = new System.Drawing.Size(266, 23);
             this.label1.TabIndex = 0;
-            this.label1.Text = "ver pedidos realizados";
+            this.label1.Text = ".:. Detalle del Pedido .:.";
             // 
-            // timer1
+            // dg_Tickets_Detalle
             // 
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            this.dg_Tickets_Detalle.AllowUserToAddRows = false;
+            this.dg_Tickets_Detalle.AllowUserToDeleteRows = false;
+            this.dg_Tickets_Detalle.AllowUserToOrderColumns = true;
+            this.dg_Tickets_Detalle.AllowUserToResizeRows = false;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(163)))), ((int)(((byte)(235)))));
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.Black;
+            this.dg_Tickets_Detalle.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
+            this.dg_Tickets_Detalle.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(253)))), ((int)(((byte)(250)))));
+            this.dg_Tickets_Detalle.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dg_Tickets_Detalle.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(111)))), ((int)(((byte)(212)))));
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dg_Tickets_Detalle.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
+            this.dg_Tickets_Detalle.ColumnHeadersHeight = 30;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dg_Tickets_Detalle.DefaultCellStyle = dataGridViewCellStyle15;
+            this.dg_Tickets_Detalle.EnableHeadersVisualStyles = false;
+            this.dg_Tickets_Detalle.Location = new System.Drawing.Point(7, 220);
+            this.dg_Tickets_Detalle.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.dg_Tickets_Detalle.Name = "dg_Tickets_Detalle";
+            this.dg_Tickets_Detalle.ReadOnly = true;
+            this.dg_Tickets_Detalle.RowHeadersVisible = false;
+            this.dg_Tickets_Detalle.RowTemplate.Height = 25;
+            this.dg_Tickets_Detalle.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dg_Tickets_Detalle.Size = new System.Drawing.Size(623, 199);
+            this.dg_Tickets_Detalle.TabIndex = 61;
             // 
-            // pnl_ver_pedidos
+            // pnl_cabecera_tickets
             // 
-            this.pnl_ver_pedidos.Controls.Add(this.lbl_total_tickets);
-            this.pnl_ver_pedidos.Controls.Add(this.button5);
-            this.pnl_ver_pedidos.Controls.Add(this.button4);
-            this.pnl_ver_pedidos.Controls.Add(this.button3);
-            this.pnl_ver_pedidos.Controls.Add(this.button2);
-            this.pnl_ver_pedidos.Controls.Add(this.button1);
-            this.pnl_ver_pedidos.Controls.Add(this.dg_Tickets);
-            this.pnl_ver_pedidos.Controls.Add(this.panel4);
-            this.pnl_ver_pedidos.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnl_ver_pedidos.Location = new System.Drawing.Point(3, 3);
-            this.pnl_ver_pedidos.Name = "pnl_ver_pedidos";
-            this.pnl_ver_pedidos.Size = new System.Drawing.Size(634, 539);
-            this.pnl_ver_pedidos.TabIndex = 1;
+            this.pnl_cabecera_tickets.Controls.Add(this.lbl_nro_tickets);
+            this.pnl_cabecera_tickets.Controls.Add(this.button5);
+            this.pnl_cabecera_tickets.Controls.Add(this.button4);
+            this.pnl_cabecera_tickets.Controls.Add(this.button3);
+            this.pnl_cabecera_tickets.Controls.Add(this.button2);
+            this.pnl_cabecera_tickets.Controls.Add(this.button1);
+            this.pnl_cabecera_tickets.Controls.Add(this.dg_Tickets);
+            this.pnl_cabecera_tickets.Controls.Add(this.panel4);
+            this.pnl_cabecera_tickets.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnl_cabecera_tickets.Location = new System.Drawing.Point(3, 3);
+            this.pnl_cabecera_tickets.Name = "pnl_cabecera_tickets";
+            this.pnl_cabecera_tickets.Size = new System.Drawing.Size(634, 539);
+            this.pnl_cabecera_tickets.TabIndex = 1;
+            // 
+            // lbl_nro_tickets
+            // 
+            this.lbl_nro_tickets.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_nro_tickets.Location = new System.Drawing.Point(393, 422);
+            this.lbl_nro_tickets.Name = "lbl_nro_tickets";
+            this.lbl_nro_tickets.Size = new System.Drawing.Size(235, 22);
+            this.lbl_nro_tickets.TabIndex = 67;
+            this.lbl_nro_tickets.Text = "label12";
+            this.lbl_nro_tickets.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // button5
+            // 
+            this.button5.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button5.ImageKey = "nuevo_pedido.png";
+            this.button5.ImageList = this.imageList1;
+            this.button5.Location = new System.Drawing.Point(465, 460);
+            this.button5.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(106, 61);
+            this.button5.TabIndex = 66;
+            this.button5.Text = "&Factura";
+            this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.button5.UseVisualStyleBackColor = true;
+            // 
+            // button4
+            // 
+            this.button4.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button4.ImageKey = "nuevo_pedido.png";
+            this.button4.ImageList = this.imageList1;
+            this.button4.Location = new System.Drawing.Point(351, 460);
+            this.button4.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(106, 61);
+            this.button4.TabIndex = 65;
+            this.button4.Text = "&Boleta";
+            this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button3.ImageKey = "nuevo_pedido.png";
+            this.button3.ImageList = this.imageList1;
+            this.button3.Location = new System.Drawing.Point(237, 460);
+            this.button3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(106, 61);
+            this.button3.TabIndex = 64;
+            this.button3.Text = "&Dividir Precuenta";
+            this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button2.ImageKey = "nuevo_pedido.png";
+            this.button2.ImageList = this.imageList1;
+            this.button2.Location = new System.Drawing.Point(123, 460);
+            this.button2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(106, 61);
+            this.button2.TabIndex = 63;
+            this.button2.Text = "&Emitir Precuenta";
+            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button1.ImageKey = "nuevo_pedido.png";
+            this.button1.ImageList = this.imageList1;
+            this.button1.Location = new System.Drawing.Point(9, 460);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(106, 61);
+            this.button1.TabIndex = 62;
+            this.button1.Text = "&Anular Pedido";
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // dg_Tickets
+            // 
+            this.dg_Tickets.AllowUserToAddRows = false;
+            this.dg_Tickets.AllowUserToDeleteRows = false;
+            this.dg_Tickets.AllowUserToOrderColumns = true;
+            this.dg_Tickets.AllowUserToResizeRows = false;
+            dataGridViewCellStyle22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(163)))), ((int)(((byte)(235)))));
+            dataGridViewCellStyle22.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle22.ForeColor = System.Drawing.Color.Black;
+            this.dg_Tickets.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle22;
+            this.dg_Tickets.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(253)))), ((int)(((byte)(250)))));
+            this.dg_Tickets.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dg_Tickets.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(111)))), ((int)(((byte)(212)))));
+            dataGridViewCellStyle23.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle23.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dg_Tickets.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle23;
+            this.dg_Tickets.ColumnHeadersHeight = 30;
+            this.dg_Tickets.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1});
+            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle24.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle24.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle24.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle24.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle24.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dg_Tickets.DefaultCellStyle = dataGridViewCellStyle24;
+            this.dg_Tickets.EnableHeadersVisualStyles = false;
+            this.dg_Tickets.Location = new System.Drawing.Point(9, 46);
+            this.dg_Tickets.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.dg_Tickets.Name = "dg_Tickets";
+            this.dg_Tickets.ReadOnly = true;
+            this.dg_Tickets.RowHeadersVisible = false;
+            this.dg_Tickets.RowTemplate.Height = 25;
+            this.dg_Tickets.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dg_Tickets.Size = new System.Drawing.Size(621, 373);
+            this.dg_Tickets.TabIndex = 61;
+            this.dg_Tickets.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dg_Tickets_CellClick);
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Seleccion";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
             // 
             // panel4
             // 
@@ -880,139 +1191,9 @@
             this.label11.TabIndex = 0;
             this.label11.Text = ".:. Pedidos Realizados .:.";
             // 
-            // dg_Tickets
+            // timer1
             // 
-            this.dg_Tickets.AllowUserToAddRows = false;
-            this.dg_Tickets.AllowUserToDeleteRows = false;
-            this.dg_Tickets.AllowUserToOrderColumns = true;
-            this.dg_Tickets.AllowUserToResizeRows = false;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(163)))), ((int)(((byte)(235)))));
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
-            this.dg_Tickets.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
-            this.dg_Tickets.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(253)))), ((int)(((byte)(250)))));
-            this.dg_Tickets.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dg_Tickets.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(111)))), ((int)(((byte)(212)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dg_Tickets.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
-            this.dg_Tickets.ColumnHeadersHeight = 30;
-            this.dg_Tickets.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1});
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dg_Tickets.DefaultCellStyle = dataGridViewCellStyle9;
-            this.dg_Tickets.EnableHeadersVisualStyles = false;
-            this.dg_Tickets.Location = new System.Drawing.Point(9, 46);
-            this.dg_Tickets.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.dg_Tickets.Name = "dg_Tickets";
-            this.dg_Tickets.ReadOnly = true;
-            this.dg_Tickets.RowHeadersVisible = false;
-            this.dg_Tickets.RowTemplate.Height = 25;
-            this.dg_Tickets.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dg_Tickets.Size = new System.Drawing.Size(621, 304);
-            this.dg_Tickets.TabIndex = 61;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Seleccion";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button1.ImageKey = "nuevo_pedido.png";
-            this.button1.ImageList = this.imageList1;
-            this.button1.Location = new System.Drawing.Point(9, 460);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(106, 61);
-            this.button1.TabIndex = 62;
-            this.button1.Text = "&Anular Pedido";
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button2.ImageKey = "nuevo_pedido.png";
-            this.button2.ImageList = this.imageList1;
-            this.button2.Location = new System.Drawing.Point(123, 460);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(106, 61);
-            this.button2.TabIndex = 63;
-            this.button2.Text = "&Emitir Precuenta";
-            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button3.ImageKey = "nuevo_pedido.png";
-            this.button3.ImageList = this.imageList1;
-            this.button3.Location = new System.Drawing.Point(237, 460);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(106, 61);
-            this.button3.TabIndex = 64;
-            this.button3.Text = "&Dividir Precuenta";
-            this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button4.ImageKey = "nuevo_pedido.png";
-            this.button4.ImageList = this.imageList1;
-            this.button4.Location = new System.Drawing.Point(351, 460);
-            this.button4.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(106, 61);
-            this.button4.TabIndex = 65;
-            this.button4.Text = "&Boleta";
-            this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // button5
-            // 
-            this.button5.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button5.ImageKey = "nuevo_pedido.png";
-            this.button5.ImageList = this.imageList1;
-            this.button5.Location = new System.Drawing.Point(465, 460);
-            this.button5.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(106, 61);
-            this.button5.TabIndex = 66;
-            this.button5.Text = "&Factura";
-            this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // lbl_total_tickets
-            // 
-            this.lbl_total_tickets.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_total_tickets.Location = new System.Drawing.Point(336, 357);
-            this.lbl_total_tickets.Name = "lbl_total_tickets";
-            this.lbl_total_tickets.Size = new System.Drawing.Size(235, 22);
-            this.lbl_total_tickets.TabIndex = 67;
-            this.lbl_total_tickets.Text = "label12";
-            this.lbl_total_tickets.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // frmMesa_Abierta
             // 
@@ -1047,11 +1228,15 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.pag_ver.ResumeLayout(false);
-            this.pag_ver.PerformLayout();
-            this.pnl_ver_pedidos.ResumeLayout(false);
+            this.pnl_detalle_tickets.ResumeLayout(false);
+            this.pnl_detalle_tickets.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dg_Tickets_Detalle)).EndInit();
+            this.pnl_cabecera_tickets.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dg_Tickets)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dg_Tickets)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1070,14 +1255,13 @@
         private System.Windows.Forms.TabControl tab_pedidos;
         private System.Windows.Forms.TabPage pag_nuevo;
         private System.Windows.Forms.Panel pnl_pedido;
-        private System.Windows.Forms.TextBox txt_nrodocumento;
+        private System.Windows.Forms.TextBox txt_nrodoc;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txt_cliente;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TabPage pag_ver;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btn_quitar_producto;
         private System.Windows.Forms.Button btn_actualizar_cantidad;
         private System.Windows.Forms.Button btn_c;
@@ -1113,7 +1297,7 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label10;
         private System.Drawing.Printing.PrintDocument printDocument1;
-        private System.Windows.Forms.Panel pnl_ver_pedidos;
+        private System.Windows.Forms.Panel pnl_cabecera_tickets;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
@@ -1123,6 +1307,19 @@
         private System.Windows.Forms.DataGridViewCheckBoxColumn Column1;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label lbl_nro_tickets;
+        private System.Windows.Forms.Panel pnl_detalle_tickets;
+        private System.Windows.Forms.TextBox txt_tickets_sel;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.TextBox txt_nrodoc_tickets;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.TextBox txt_cliente_tickets;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridView dg_Tickets_Detalle;
+        private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label lbl_total_tickets;
+        private System.Windows.Forms.Button btn_reimprimir_comanda;
     }
 }

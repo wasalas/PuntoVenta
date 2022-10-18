@@ -45,6 +45,7 @@
     <Compile Include="NClientes.cs" />
     <Compile Include="NDetalle_Tickets.cs" />
     <Compile Include="NEncabezado_Tickets.cs" />
+    <Compile Include="NUsuarios.cs" />
     <Compile Include="NTipo_Doc_Ide.cs" />
     <Compile Include="NImagem_Predeterminada.cs" />
     <Compile Include="NImagem_Productos.cs" />

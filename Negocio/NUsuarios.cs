@@ -9,9 +9,15 @@ using Entidades;
 
 namespace Negocio
 {
-    public class NMarcas
+    public class NUsuarios
     {
-        public static DataTable Listado(byte estado, string texto)
+        public static DataTable Administrador(int codigo_us)
+        {
+            DUsuarios oDatos = new DUsuarios();
+            return oDatos.Adminstrador(codigo_us);
+        }
+        /*
+        public static DataTable Listado(byte estado, string texto )
         {
             DMarcas oDatos = new DMarcas();
             return oDatos.Listado(estado, texto);
@@ -26,5 +32,6 @@ namespace Negocio
             DMarcas oDatos = new DMarcas();
             return oDatos.Eliminar(codigo);
         }
+        */
     }
 }

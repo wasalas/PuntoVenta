@@ -123,7 +123,7 @@ namespace Presentacion.Procesos
             this.tab_pedidos.Controls["pag_nuevo"].Enabled = true;
             this.tab_pedidos.Controls["pag_ver"].Enabled = false;
             this.tab_pedidos.SelectedIndex = 0;
-            timer1.Enabled = true; 
+            timer1.Enabled = true;
         }
         private void btn_ver_pedido_Click(object sender, EventArgs e)
         {
@@ -245,12 +245,12 @@ namespace Presentacion.Procesos
                 string nNrodoc = frm.oDatos.Nrodoc_cl;
                 codigo_cl = frm.oDatos.Codigo_cl;
                 txt_cliente.Text = cNombre;
-                txt_nrodocumento.Text = nNrodoc;
+                txt_nrodoc.Text = nNrodoc;
             }
             else
             {
                 txt_cliente.Text = "";
-                txt_nrodocumento.Text = "";
+                txt_nrodoc.Text = "";
                 codigo_cl = 0;
             }
         }
@@ -273,7 +273,7 @@ namespace Presentacion.Procesos
             {
                 oDatos.Fecha_trabajo = this.fecha_trabajo;
                 oDatos.Codigo_cl = this.codigo_cl;
-                oDatos.Nrodoc_cl = this.txt_nrodocumento.Text; 
+                oDatos.Nrodoc_cl = this.txt_nrodoc.Text;
                 oDatos.Nombre_cl = this.txt_cliente.Text;
                 oDatos.Codigo_me = this.codigo_me;
                 oDatos.Total_ti = Convert.ToDecimal(lbl_total.Text);
@@ -448,7 +448,7 @@ namespace Presentacion.Procesos
         private void Limpiar_Datos()
         {
             txt_cliente.Text = "";
-            txt_nrodocumento.Text = "";
+            txt_nrodoc.Text = "";
             lbl_cantidad.Text = "";
             lbl_total.Text = "";
             dt_DetalleProd.Clear();
@@ -478,7 +478,7 @@ namespace Presentacion.Procesos
             e.Graphics.DrawString("----- PRODUCTOS -----", font2, Brushes.Black, new RectangleF(0, y += 30, ancho, 20));
 
             // DETALLE
-            dtImprimir = NDetalle_Tickets.Listado_Detalle_Tickets(sImpresora, nCodigo_ti);
+            dtImprimir = NDetalle_Tickets.Listado_Detalle_Tickets_PRN(sImpresora, nCodigo_ti);
             int nCountD = dtImprimir.Rows.Count;
             if (nCountD > 0)
             {
@@ -501,13 +501,13 @@ namespace Presentacion.Procesos
             dg_Tickets.Columns[0].ReadOnly = true;
 
             dg_Tickets.Columns[1].HeaderText = "Nº TICKET";
-            dg_Tickets.Columns[1].Width = 75;
+            dg_Tickets.Columns[1].Width = 85;
 
             dg_Tickets.Columns[2].HeaderText = "CLIENTE";
             dg_Tickets.Columns[2].Width = 240;
 
             dg_Tickets.Columns[3].HeaderText = "EMISION";
-            dg_Tickets.Columns[3].Width = 120;
+            dg_Tickets.Columns[3].Width = 110;
 
             dg_Tickets.Columns[4].HeaderText = "TOTAL S/.";
             dg_Tickets.Columns[4].Width = 120;
@@ -517,12 +517,35 @@ namespace Presentacion.Procesos
 
             Metodos.Formato_dgv(dg_Tickets, 10);
         }
+        private void Formato_Tickets_Detalle()
+        {
+            dg_Tickets_Detalle.Columns[0].HeaderText = "PRODUCTO";
+            dg_Tickets_Detalle.Columns[0].Width = 210;
+
+            dg_Tickets_Detalle.Columns[1].HeaderText = "PRECIO";
+            dg_Tickets_Detalle.Columns[1].Width = 75;
+
+            dg_Tickets_Detalle.Columns[2].HeaderText = "CANT.";
+            dg_Tickets_Detalle.Columns[2].Width = 75;
+
+            dg_Tickets_Detalle.Columns[3].HeaderText = "TOTAL S/.";
+            dg_Tickets_Detalle.Columns[3].Width = 120;
+
+            dg_Tickets_Detalle.Columns[4].HeaderText = "OBS.";
+            dg_Tickets_Detalle.Columns[4].Width = 130;
+
+            dg_Tickets_Detalle.Columns[5].Visible = false;
+            dg_Tickets_Detalle.Columns[6].Visible = false;
+            dg_Tickets_Detalle.Columns[7].Visible = false;
+
+            Metodos.Formato_dgv(dg_Tickets_Detalle, 10);
+        }
         private void Mostrar_Tickets()
         {
             try
             {
                 dg_Tickets.DataSource = NEncabezado_Tickets.Mostrar_Tickets_Mesa(this.codigo_me);
-                lbl_total_tickets.Text ="Total Tickets : " + Convert.ToString( dg_Tickets.Rows.Count);
+                lbl_nro_tickets.Text = "Total Tickets : " + Convert.ToString(dg_Tickets.Rows.Count);
                 Formato_Tickets();
             }
             catch (Exception ex)
@@ -530,6 +553,63 @@ namespace Presentacion.Procesos
                 MessageBox.Show(ex.Message + ex.StackTrace);
             }
         }
+        private void Mostrar_Tickets_Detalle()
+        {
+            string scodigo_ti = Convert.ToString(dg_Tickets.CurrentRow.Cells["codigo_ti"].Value);
+            if (string.IsNullOrEmpty(scodigo_ti))
+            {
+                MessageBox.Show("Seleccione un Ticket", "Aviso del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+            int ncodigo_ti = Convert.ToInt32(scodigo_ti);
+            try
+            {
+                txt_cliente_tickets.Text = Convert.ToString(dg_Tickets.CurrentRow.Cells["nombre_cl"].Value);
+                txt_nrodoc_tickets.Text = Convert.ToString(dg_Tickets.CurrentRow.Cells["nrodoc_cl"].Value);
+                lbl_total_tickets.Text = Convert.ToString(dg_Tickets.CurrentRow.Cells["total_ti"].Value);
+
+                dg_Tickets_Detalle.DataSource = NDetalle_Tickets.Listado_Detalle_Tickets(ncodigo_ti);
+                Formato_Tickets_Detalle();
+
+                /*
+                dg_Tickets.DataSource = NEncabezado_Tickets.Mostrar_Tickets_Mesa(this.codigo_me);
+                lbl_nro_tickets.Text = "Total Tickets : " + Convert.ToString(dg_Tickets.Rows.Count);
+                Formato_Tickets();
+                */
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + ex.StackTrace);
+            }
+        }
         #endregion
+
+        private void dg_Tickets_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Mostrar_Tickets_Detalle();
+        }
+
+        private void btn_reimprimir_comanda_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int ncodigo_us = 1;
+                
+                DataTable dt_Temp = NUsuarios.Administrador(ncodigo_us);
+                int ncodigo_ro = Convert.ToInt32(dt_Temp.Rows[0]["codigo_ro"]);
+                
+                if (ncodigo_ro != 1)
+                {
+                    MessageBox.Show("Usuario no tiene Acceso para este proceso.", "Aviso del sistema", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    return;
+                }
+                // continuara.............
+                MessageBox.Show("Reimprimiendo......", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + ex.StackTrace);
+            }
+        }
     }
 }
